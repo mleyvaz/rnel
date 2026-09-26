@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rnel"
+version = "0.1.0"
+description = "Refined Neutrosophic Evidential Logic: evidence tuples, Subjective Logic operators, priority-product operators, ranking and neural evidential heads"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Maikel Yelandi Leyva-Vázquez"}, {name = "Florentin Smarandache"}]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+nn = ["torch>=2.0"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
