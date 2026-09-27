@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rnel"
-version = "0.1.0"
+version = "0.1.1"
 description = "Refined Neutrosophic Evidential Logic: evidence tuples, Subjective Logic operators, priority-product operators, ranking and neural evidential heads"
 readme = "README.md"
 license = {text = "MIT"}

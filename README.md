@@ -54,7 +54,7 @@ Demo app: `streamlit run examples/app.py`.
 | `rnel.tuple` | RNEL reports, the tuple of Definition 8.1, cumulative fusion (Theorem 8.2), fused contradiction (Definition 8.4) |
 | `rnel.operators` | Priority-product ∧, ∨, ¬ for (T, I, N, F), (T, I, N, U₁…Uₙ, F) and RNEL, with coarsening to SL |
 | `rnel.ranking` | Total-order cascades: score, accuracy, extended certainty, certainty |
-| `rnel.decide` | From a tuple to an action (thresholds to be tuned with the costs of each application) |
+| `rnel.decide` | From a tuple to an action (thresholds to be tuned with the costs of each application). Since v0.1.1 the evidence gate is monotone: a report for x never yields "refuted" (see CHANGELOG) |
 | `rnel.nn` | PyTorch: typed evidential head, loss, per-source evidential network, source conflict, fused dissonance |
 | `rnel.text` | Zero-shot RNEL from a claim and evidence texts via an NLI model |
 | `rnel.datasets` | Loaders for AVeriTeC, CLIMATE-FEVER and ChaosNLI with their mapping to RNEL types |
