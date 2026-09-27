@@ -1,17 +1,19 @@
 """RNEL multi-view clustering (requires numpy and scikit-learn).
 
-Each view is a source. Clusters are found on all views jointly; then, for every point, each view reports
-evidence about which cluster the point belongs to, from the cluster labels of its nearest neighbours in
-that view, scaled by how dense the neighbourhood is. The reports are typed as in Definition 8.1:
+Each view is a source of reports about whether a point belongs to its assigned cluster a. In view v the
+m nearest neighbours of the point (in that view) are counted by cluster, and each count is scaled by a
+density factor rho_v in (0, 1] (1 when the neighbourhood is as dense as usual). The evidence of view v is
+split, without double counting, into report counts of Definition 8.1:
 
-  t  support for the assigned cluster (evidence of every view for it)
-  c  contradiction: confident views pointing to different clusters (Definition 8.4, between sources)
-  u  undetermined: within a view, evidence split between the two best clusters (overlap)
-  n  neither: the point is far from every cluster in a view (outlier), counted as evidence for "none"
-  W  prior weight; G = W / (t + c + u + n + W) is the ignorance
+  support    t_v = c_v(a) - min(c_v(a), o_v)          neighbours in the assigned cluster
+  against    f_v = o_v - min(c_v(a), o_v)             neighbours in other clusters, o_v = sum_{k!=a} c_v(k)
+  undetermined  v_v = 2 min(c_v(a), o_v)              the balanced part of a split neighbourhood
+  neither    n_v = m (1 - rho_v)                      neighbourhood mass missing because the point is remote
 
-and the tuple is (T, C, U, N, G) = (t, c, u, n, W) / S. With one view, no outliers and well separated
-clusters it reduces to the support of the assigned cluster and the ignorance, as in Subjective Logic.
+so that t_v + f_v + v_v = c_v(a) + o_v. The views are fused with rnel.tuple.fused_contradiction
+(Definition 8.4): T, F, U, N and G come from the summed counts, and C is the largest pairwise Subjective
+Logic degree of conflict between the views' opinions (t_v, f_v) about membership in a. As in Definition 8.4
+the total may exceed 1 when views conflict.
 """
 from __future__ import annotations
 
@@ -28,84 +30,90 @@ from sklearn.preprocessing import StandardScaler
 class ClusterTuples:
     labels: np.ndarray
     T: np.ndarray
+    F: np.ndarray
     C: np.ndarray
     U: np.ndarray
     N: np.ndarray
     G: np.ndarray
 
-    def dominant(self) -> np.ndarray:
-        """Name of the largest component per point."""
-        M = np.stack([self.T, self.C, self.U, self.N, self.G], 1)
-        return np.array(["T", "C", "U", "N", "G"])[M.argmax(1)]
+    def features(self) -> np.ndarray:
+        return np.stack([self.T, self.F, self.C, self.U, self.N, self.G], 1)
 
 
 class RNELMultiViewClusterer:
     def __init__(self, n_clusters: int, n_neighbors: int = 20, W: float = 2.0, pca_dim: int = 20,
-                 random_state: int = 0):
-        self.k, self.m, self.W, self.pca_dim, self.rs = n_clusters, n_neighbors, W, pca_dim, random_state
+                 base_rate: float = 0.5, random_state: int = 0):
+        self.k, self.m, self.W, self.pca_dim, self.a, self.rs = (n_clusters, n_neighbors, W, pca_dim,
+                                                                  base_rate, random_state)
 
-    # ------------------------------------------------------------------ fitting
     def _embed(self, v, X, fit):
         if fit:
             sc = StandardScaler().fit(X)
             d = min(self.pca_dim, X.shape[1], X.shape[0] - 1)
-            pca = PCA(d, random_state=self.rs).fit(sc.transform(X))
             self.scalers_.append(sc)
-            self.pcas_.append(pca)
+            self.pcas_.append(PCA(d, random_state=self.rs).fit(sc.transform(X)))
         return self.pcas_[v].transform(self.scalers_[v].transform(X))
+
+    def embed(self, views):
+        return [self._embed(v, X, False) for v, X in enumerate(views)]
 
     def fit(self, views: list[np.ndarray]) -> "RNELMultiViewClusterer":
         self.scalers_, self.pcas_ = [], []
         Z = [self._embed(v, X, True) for v, X in enumerate(views)]
-        joint = np.hstack([z / np.sqrt(z.shape[1]) for z in Z])  # each view weighted equally
+        joint = np.hstack([z / np.sqrt(z.shape[1]) for z in Z])
         self.kmeans_ = KMeans(self.k, n_init=10, random_state=self.rs).fit(joint)
         self.labels_ = self.kmeans_.labels_
         self.nn_, self.rbar_ = [], []
         for z in Z:
             nn = NearestNeighbors(n_neighbors=self.m + 1).fit(z)
-            dist, _ = nn.kneighbors(z)
+            dist, _ = nn.kneighbors(z)                 # first neighbour is the point itself
             self.nn_.append(nn)
-            self.rbar_.append(np.median(dist[:, -1]))  # typical distance to the m-th neighbour
-        self.Ztrain_ = Z
+            self.rbar_.append(np.median(dist[:, -1]))  # typical distance to the m-th other point
         return self
 
-    # ------------------------------------------------------------------ evidence
-    def view_evidence(self, views: list[np.ndarray], exclude_self: bool = False):
-        """Per view: evidence counts over clusters (n_points, k) and density factor rho in (0, 1]."""
+    def neighbours(self, views, training_rows: np.ndarray | None = None):
+        """Per view (dist, idx) of the m nearest fitting points. If the queries are fitting points, pass
+        their row indices in training_rows so that each point is removed from its own neighbourhood."""
         out = []
-        for v, X in enumerate(views):
-            z = self._embed(v, X, False)
-            dist, idx = self.nn_[v].kneighbors(z, n_neighbors=self.m + (1 if exclude_self else 0))
-            if exclude_self:
-                dist, idx = dist[:, 1:], idx[:, 1:]
+        for v, z in enumerate(self.embed(views)):
+            extra = 1 if training_rows is not None else 0
+            dist, idx = self.nn_[v].kneighbors(z, n_neighbors=self.m + extra)
+            if training_rows is not None:
+                keep = idx != training_rows[:, None]
+                # drop the query's own row (or the last neighbour if the row is absent)
+                sel = np.argsort(~keep, axis=1, kind="stable")[:, :self.m]
+                dist, idx = np.take_along_axis(dist, sel, 1), np.take_along_axis(idx, sel, 1)
+            out.append((dist, idx))
+        return out
+
+    def view_counts(self, views, training_rows=None):
+        """Per view: density-scaled neighbour counts by cluster (n, k) and the density factor rho (n,)."""
+        res = []
+        for v, (dist, idx) in enumerate(self.neighbours(views, training_rows)):
             lab = self.labels_[idx]
             counts = np.stack([(lab == c).sum(1) for c in range(self.k)], 1).astype(float)
             rho = np.minimum(1.0, self.rbar_[v] / np.maximum(dist[:, -1], 1e-12))
-            out.append((counts * rho[:, None], rho))
-        return out
+            res.append((counts * rho[:, None], rho, dist[:, -1] / self.rbar_[v]))
+        return res
 
-    def tuples(self, views: list[np.ndarray], exclude_self: bool = False) -> ClusterTuples:
-        ev = self.view_evidence(views, exclude_self)
-        E = np.stack([e for e, _ in ev], 0)                     # (views, n, k)
-        rho = np.stack([r for _, r in ev], 0)                   # (views, n)
-        total = E.sum(0)                                        # fused evidence over clusters
-        assigned = total.argmax(1)
-        n_pts = E.shape[1]
-        order = np.argsort(-E, axis=2)
-        top = np.take_along_axis(E, order[..., :1], 2)[..., 0]  # (views, n)
-        second = np.take_along_axis(E, order[..., 1:2], 2)[..., 0]
-        top_lab = order[..., 0]
-        # t: support of every view for the assigned cluster, minus what is counted as undetermined
-        support = np.take_along_axis(E, assigned[None, :, None].repeat(E.shape[0], 0), 2)[..., 0]
-        u = second.sum(0)                                        # within-view split (overlap)
-        t = np.maximum(support.sum(0) - u, 0.0)
-        # c: largest pairwise conflict between views that confidently favour different clusters
-        c = np.zeros(n_pts)
+    def tuples(self, views, training_rows=None) -> ClusterTuples:
+        vc = self.view_counts(views, training_rows)
+        E = np.stack([c for c, _, _ in vc])                   # (V, n, k)
+        rho = np.stack([r for _, r, _ in vc])                 # (V, n)
+        assigned = E.sum(0).argmax(1)
+        sup = np.take_along_axis(E, np.broadcast_to(assigned[None, :, None], E.shape[:2] + (1,)), 2)[..., 0]
+        oth = E.sum(2) - sup
+        mn = np.minimum(sup, oth)
+        t, f, u = sup - mn, oth - mn, 2 * mn                   # (V, n) report counts per view
+        nn = self.m * (1 - rho)
+        S = t.sum(0) + f.sum(0) + u.sum(0) + nn.sum(0) + self.W
+        # Definition 8.4: largest pairwise SL degree of conflict between view opinions (t_v, f_v)
+        Sv = t + f + self.W
+        b, d, uu = t / Sv, f / Sv, self.W / Sv
+        P = b + self.a * uu
         V = E.shape[0]
-        for a in range(V):
-            for b in range(a + 1, V):
-                diff = top_lab[a] != top_lab[b]
-                c = np.maximum(c, np.where(diff, np.minimum(top[a] - second[a], top[b] - second[b]), 0.0))
-        n = (self.m * (1 - rho)).sum(0)                          # missing neighbourhood mass: "none"
-        S = t + c + u + n + self.W
-        return ClusterTuples(assigned, t / S, c / S, u / S, n / S, self.W / S)
+        C = np.zeros(E.shape[1])
+        for i in range(V):
+            for j in range(i + 1, V):
+                C = np.maximum(C, np.abs(P[i] - P[j]) * (1 - uu[i]) * (1 - uu[j]))
+        return ClusterTuples(assigned, t.sum(0) / S, f.sum(0) / S, C, u.sum(0) / S, nn.sum(0) / S, self.W / S)
