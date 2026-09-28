@@ -127,7 +127,7 @@ class RNELMVC:
             for j in range(i + 1, V):
                 Cr = np.maximum(Cr, np.abs(Pr[i] - Pr[j]) * (1 - er[i]) * (1 - er[j]))
         support_share = s.sum(0) / (s.sum(0) + o.sum(0) + nn.sum(0))
-        return dict(Pr=Pr, pi_raw=support_share * ((1 - Cr) if self.use_conflict else 1.0), T=t.sum(0) / S, F=f.sum(0) / S, C=C, U=u.sum(0) / S, N=nn.sum(0) / S, G=G, P=P,
+        return dict(Cr=Cr, support_share=support_share, Pr=Pr, pi_raw=support_share * ((1 - Cr) if self.use_conflict else 1.0), T=t.sum(0) / S, F=f.sum(0) / S, C=C, U=u.sum(0) / S, N=nn.sum(0) / S, G=G, P=P,
                     runner=runner)
 
     def _pi(self, tp):
@@ -145,6 +145,7 @@ class RNELMVC:
         labels = KMeans(self.k, n_init=10, random_state=self.rs).fit_predict(joint)
         w = np.ones(V) / V
         it = 0
+        converged = False
         for it in range(1, self.max_iter + 1):
             tp = self._tuple(labels)
             pi = self._pi(tp) if self.use_pi else np.ones(n)
@@ -163,6 +164,7 @@ class RNELMVC:
                 D += w[v] * d / max(scale, 1e-12)
             new = D.argmin(1)
             if np.array_equal(new, labels):
+                converged = True
                 break
             labels = new
         # every returned quantity is recomputed from the final partition (review v3: w could be one step stale)
@@ -173,7 +175,9 @@ class RNELMVC:
             Pv = tp["Pr"] if self.weight_evidence == "raw" else tp["P"]
             r = np.array([(pe * Pv[v]).sum() / pe.sum() for v in range(V)])
             w = r / r.sum()
-        self.converged_ = it < self.max_iter or np.array_equal(new, labels)
+        self.converged_ = converged
+        self.C_learn_ = tp["Cr"]            # conflict used in the point weights (unsplit evidence)
+        self.support_share_ = tp["support_share"]
         self.result_ = MVCResult(labels, tp["runner"], w, pi, tp["T"], tp["F"], tp["C"], tp["U"], tp["N"],
                                  tp["G"], it)
         return self.result_

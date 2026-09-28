@@ -55,3 +55,14 @@ def test_typing_labels():
     views, _ = _blobs()
     t = type_points(RNELMVC(3, n_neighbors=10).fit(views))
     assert set(t) <= {"clean", "conflict", "ambiguous", "outlier"}
+
+
+def test_convergence_flag_and_learning_conflict():
+    views, _ = _blobs()
+    m = RNELMVC(3, n_neighbors=10, max_iter=1)
+    m.fit(views)
+    assert m.converged_ in (True, False)
+    m2 = RNELMVC(3, n_neighbors=10)
+    r = m2.fit(views)
+    assert m2.converged_ is True
+    assert np.allclose(r.point_weights, m2.support_share_ * (1 - m2.C_learn_))
