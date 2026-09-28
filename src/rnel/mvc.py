@@ -10,6 +10,7 @@ Each iteration
      the doubt and empty-set masses in ECM). weight_evidence='tuple' uses T/(1-G)(1-C) instead (ablation);
   3. sets a view weight  w_v proportional to the pi-weighted mean projected probability that view v gives to
      the points' clusters: a view that systematically disagrees with the consensus loses weight;
+  (the weights actually used are max(pi, 1e-6), for both the view weights and the centroids)
   4. updates per-view centroids as pi-weighted means and reassigns each point to the cluster minimising the
      w-weighted sum of per-view squared distances (each view scaled by its mean within-cluster dispersion).
 It stops when the labels no longer change. The output is a partition, view weights, the tuple of every point
@@ -43,6 +44,26 @@ class MVCResult:
 
     def features(self) -> np.ndarray:
         return np.stack([self.T, self.F, self.C, self.U, self.N, self.G], 1)
+
+
+class ViewEmbedder:
+    """Per-view standardisation + PCA fitted on one set of objects (e.g. the unlabelled pool) and applied to
+    others (e.g. a held-out test set), so that no test information enters the preprocessing."""
+
+    def __init__(self, pca_dim=20, random_state=0):
+        self.pca_dim, self.rs = pca_dim, random_state
+
+    def fit(self, views):
+        self.sc_, self.pca_ = [], []
+        for X in views:
+            sc = StandardScaler().fit(X)
+            d = min(self.pca_dim, X.shape[1], X.shape[0] - 1)
+            self.sc_.append(sc)
+            self.pca_.append(PCA(d, random_state=self.rs).fit(sc.transform(X)))
+        return self
+
+    def transform(self, views):
+        return [p.transform(s.transform(X)) for X, s, p in zip(views, self.sc_, self.pca_)]
 
 
 def embed_views(views, pca_dim=20, random_state=0):
@@ -144,8 +165,15 @@ class RNELMVC:
             if np.array_equal(new, labels):
                 break
             labels = new
+        # every returned quantity is recomputed from the final partition (review v3: w could be one step stale)
         tp = self._tuple(labels)
         pi = self._pi(tp)
+        if self.use_w:
+            pe = np.maximum(pi, 1e-6)  # effective weights, clipped as inside the loop
+            Pv = tp["Pr"] if self.weight_evidence == "raw" else tp["P"]
+            r = np.array([(pe * Pv[v]).sum() / pe.sum() for v in range(V)])
+            w = r / r.sum()
+        self.converged_ = it < self.max_iter or np.array_equal(new, labels)
         self.result_ = MVCResult(labels, tp["runner"], w, pi, tp["T"], tp["F"], tp["C"], tp["U"], tp["N"],
                                  tp["G"], it)
         return self.result_
