@@ -7,6 +7,7 @@ Core (no dependencies beyond the standard library):
   rnel.ranking    total-order ranking cascades
   rnel.decide     from a tuple to an action
   rnel.datasets   loaders for AVeriTeC, CLIMATE-FEVER and ChaosNLI
+  rnel.off        (experimental) signed evidence, retraction and over/under/off values
 Optional (PyTorch):
   rnel.nn         typed evidential head and per-source evidential network
 """
