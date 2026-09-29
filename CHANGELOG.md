@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0 — unreleased
+- **New experimental module `rnel.off`: signed evidence and over/under/off values.** `EvidenceLedger` records reports
+  and retractions per source (`report`, `retract`, `retract_source`, the unfusion of Subjective Logic) and sources
+  known to invert their reports (`invert`); an over-retraction is rejected or returned as an `OffOpinion` flagged as
+  lying outside the Beta region (r > -aW and s > -(1-a)W). The module also implements the over/under/off operators
+  of Smarandache and Leyva-Vázquez (offunion, offintersection, offcomplement, scaled conjunction and disjunction,
+  typed discounting with a real trust value, the off-RNEL tuple and the retraction map).
+- `scripts/check_off_extensions.py`: numerical checks of the off-extension theorems and worked applications.
+- Tests: `tests/test_off.py`.
+
 ## 0.1.1 — 2026-09-27
 - **Fix (`rnel.decide.Policy`): the evidence gate is now monotone.** In 0.1.0 the policy abstained when the ignorance
   component G was at or above its threshold and otherwise answered with the leading side. Since G falls whenever any
