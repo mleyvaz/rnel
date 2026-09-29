@@ -7,6 +7,12 @@
   lying outside the Beta region (r > -aW and s > -(1-a)W). The module also implements the over/under/off operators
   of Smarandache and Leyva-Vázquez (offunion, offintersection, offcomplement, scaled conjunction and disjunction,
   typed discounting with a real trust value, the off-RNEL tuple and the retraction map).
+- **New in `rnel.operators`: base-rate-calibrated conjunction and disjunction** (`calibrated_and`, `calibrated_or`),
+  Section 5.2 of Smarandache and Leyva-Vázquez. They add to any priority-product operator ((T, I, N, F),
+  multi-uncertainty or RNEL) the transfer of mass from indeterminacy to T (or F) that reproduces SL
+  multiplication (comultiplication) for arbitrary base rates. Tests: `tests/test_calibrated.py` (equality with SL
+  for random base rates in the three families, De Morgan with complemented base rates, reduction to the
+  uncalibrated operators at the extreme base rates).
 - `scripts/check_off_extensions.py`: numerical checks of the off-extension theorems and worked applications.
 - Tests: `tests/test_off.py`.
 

@@ -104,3 +104,48 @@ def coarsen(x: Mapping[str, float]) -> tuple[float, float, float]:
     """pi: (T, everything else, F) -> SL (b, u, d) coordinates, unnormalised."""
     rest = mass(x) - x["T"] - x["F"]
     return x["T"], rest, x["F"]
+
+
+# ----------------------------------------------------------------- base-rate-calibrated versions, Section 5.2
+def _indeterminacy(x: Mapping[str, float]) -> float:
+    return mass(x) - x["T"] - x["F"]
+
+
+def _transfer(z: Tuple, k: float, to: str) -> Tuple:
+    """Move mass k from the indeterminacy components of z (all but T and F) to component `to`,
+    taking from each in proportion to its size."""
+    out = dict(z)
+    rest = [c for c in z if c not in ("T", "F")]
+    tot = sum(z[c] for c in rest)
+    if k == 0 or tot == 0:
+        return out
+    for c in rest:
+        out[c] -= k * z[c] / tot
+    out[to] += k
+    return out
+
+
+def calibrated_and(x, y, ax: float, ay: float, conj=tinf_and) -> Tuple:
+    """Base-rate-calibrated conjunction: the priority-product conjunction `conj` (tinf_and, mu_and or rnel_and)
+    plus the transfer K = [(1-ax) ay T_x I_y + ax (1-ay) I_x T_y] / (1 - ax ay) from indeterminacy to T, where
+    I is the total indeterminacy mass. On normalised inputs its coarsening is SL multiplication with base
+    rates ax, ay. The base rate of the result is ax * ay."""
+    z = conj(x, y)
+    den = 1 - ax * ay
+    if den <= 0:
+        return z
+    k = ((1 - ax) * ay * x["T"] * _indeterminacy(y) + ax * (1 - ay) * _indeterminacy(x) * y["T"]) / den
+    return _transfer(z, k, "T")
+
+
+def calibrated_or(x, y, ax: float, ay: float, disj=tinf_or) -> Tuple:
+    """Base-rate-calibrated disjunction: `disj` plus the transfer
+    K = [ax (1-ay) F_x I_y + (1-ax) ay I_x F_y] / (ax + ay - ax ay) from indeterminacy to F. On normalised
+    inputs its coarsening is SL comultiplication with base rates ax, ay. The base rate of the result is
+    ax + ay - ax * ay."""
+    z = disj(x, y)
+    den = ax + ay - ax * ay
+    if den <= 0:
+        return z
+    k = (ax * (1 - ay) * x["F"] * _indeterminacy(y) + (1 - ax) * ay * _indeterminacy(x) * y["F"]) / den
+    return _transfer(z, k, "F")
