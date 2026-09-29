@@ -81,4 +81,7 @@ def test_section10_nu_claims():
 def test_check_script_runs():
     import runpy
     from pathlib import Path
-    runpy.run_path(str(Path(__file__).resolve().parents[1] / "scripts" / "check_off_extensions.py"), run_name="x")
+    import pytest
+    with pytest.raises(SystemExit) as exc:
+        runpy.run_path(str(Path(__file__).resolve().parents[1] / "scripts" / "check_off_extensions.py"), run_name="x")
+    assert exc.value.code == 0  # every check of the submitted version passes
