@@ -1,6 +1,7 @@
 # Changelog
 
-## 0.2.0 — unreleased
+## 0.2.0 — 2026-09-29
+- Archived release: https://doi.org/10.5281/zenodo.23040628.
 - **New experimental module `rnel.off`: signed evidence and over/under/off values.** `EvidenceLedger` records reports
   and retractions per source (`report`, `retract`, `retract_source`, the unfusion of Subjective Logic) and sources
   known to invert their reports (`invert`); an over-retraction is rejected or returned as an `OffOpinion` flagged as

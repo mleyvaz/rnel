@@ -58,9 +58,10 @@ Demo app: `streamlit run examples/app.py`.
 | `rnel.nn` | PyTorch: typed evidential head, loss, per-source evidential network, source conflict, fused dissonance |
 | `rnel.text` | Zero-shot RNEL from a claim and evidence texts via an NLI model |
 | `rnel.datasets` | Loaders for AVeriTeC, CLIMATE-FEVER and ChaosNLI with their mapping to RNEL types |
+| `rnel.off` | Experimental signed-evidence ledger, source-level retraction and over/under/off values |
 
 ## Verified
-`pytest` runs the results of the paper as tests (409 tests):
+`pytest` runs the results of the paper as tests (450 tests):
 - the worked example of Proposition 8.3 and Definition 8.4;
 - Theorem 8.2;
 - Theorem 5.2 on random tuples: involution, De Morgan, multiplicative mass, and projection onto SL
@@ -69,8 +70,7 @@ Demo app: `streamlit run examples/app.py`.
 - De Morgan and SL projection for the RNEL operators;
 - the neural head and the per-source network.
 
-Not yet included: the base-rate-calibrated operators, and the score constant for (T, I, N, U₁…Uₙ, F),
-which is inferred from the n = 0 case.
+Version 0.2.0 adds base-rate-calibrated conjunction and disjunction and an experimental signed-evidence ledger. The release is archived at https://doi.org/10.5281/zenodo.23040628.
 
 ## Evidence on real data
 The preregistered evaluation of the neural head on AVeriTeC, CLIMATE-FEVER and ChaosNLI is at

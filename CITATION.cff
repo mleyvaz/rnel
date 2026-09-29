@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use rnel, please cite this software."
+title: "rnel: Refined Neutrosophic Evidential Logic"
+version: 0.2.0
+date-released: 2026-09-29
+doi: 10.5281/zenodo.23040628
+url: "https://github.com/mleyvaz/rnel"
+repository-code: "https://github.com/mleyvaz/rnel"
+license: MIT
+type: software
+authors:
+  - family-names: "Leyva-Vázquez"
+    given-names: "Maikel Yelandi"
+    orcid: "https://orcid.org/0000-0001-7911-5879"
+  - family-names: "Smarandache"
+    given-names: "Florentin"
+    orcid: "https://orcid.org/0000-0002-5560-5926"
