@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased (branch feat/credal, local only)
+- **New experimental module `rnel.credal`** (needs numpy + scikit-learn, extra `rnel[credal]`).
+  `CredalEnsemble` wraps a scikit-learn ensemble (RandomForest, 100 trees, `min_samples_leaf=5` by default) and
+  returns per-class lower/upper probabilities over the members (`envelope`: hull, alpha-trimmed as in Nguyen,
+  Zhang & Destercke, ECSQARU 2023, doi:10.1007/978-3-031-45608-4_21, or per-class quantiles), plus evidence
+  counts (`leaf`, `votes`, `mean`). `to_neutrosophic`/`from_neutrosophic` (T = l, I = u - l, F = 1 - u) are a
+  change of representation only. Information beyond the credal set comes from per-view evidence:
+  `sup_gap_views`, `c_star_multiclass` (sup-norm extension of C*), `c_star_one_vs_rest`, `evidential_state`
+  (a, b, u, c with T = a + c, F = b + c, I = u + c) and `decide` (answer / abstain_seek_data / review_sources /
+  reject).
+- Tests: `tests/test_credal.py`.
+
 ## Unreleased (branch exp/conflict-first-principles, local only)
 - **New experimental module `rnel.conflict`: between-source conflict from first principles.** `k_between`
   (K_b = min(M+, M-), the unique measure satisfying ally consolidation, unanimity null and opposed-pair

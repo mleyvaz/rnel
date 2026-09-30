@@ -14,6 +14,7 @@ dependencies = []
 
 [project.optional-dependencies]
 nn = ["torch>=2.0"]
+credal = ["numpy>=1.23", "scikit-learn>=1.2"]
 dev = ["pytest"]
 
 [tool.setuptools.packages.find]

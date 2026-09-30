@@ -9,6 +9,9 @@ Core (no dependencies beyond the standard library):
   rnel.datasets   loaders for AVeriTeC, CLIMATE-FEVER and ChaosNLI
   rnel.off        (experimental) signed evidence, retraction and over/under/off values
   rnel.conflict   (experimental) between-source conflict from axioms (K_b, C*), order-free state, provenance-aware fusion
+Optional (numpy + scikit-learn):
+  rnel.credal    (experimental) credal ensembles (lower/upper probabilities), their neutrosophic reading
+                 (representation only), per-view evidence, between-view conflict C* and actions
 Optional (PyTorch):
   rnel.nn         typed evidential head and per-source evidential network
 """
