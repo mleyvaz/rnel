@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased (branch exp/conflict-first-principles, local only)
+- **New experimental module `rnel.conflict`: between-source conflict from first principles.** `k_between`
+  (K_b = min(M+, M-), the unique measure satisfying ally consolidation, unanimity null and opposed-pair
+  additivity), `k_within`, `credal_gap`, multinomial `sup_gap`, the additive state `ConflictState` (R, S, K_w)
+  whose fusion is order-free, the normalised component C* = 2 K_b / (R + S + W), `state_from_tuple`
+  (identifiability), provenance-aware fusion (`group_counts`, `dependence_interval`, `atom_union`) and the two
+  forms of Definition 8.4 for comparison (`def84_sequential`, `def84_maxpair`). Definition 8.4 itself is unchanged.
+- Tests: `tests/test_conflict.py`.
+
 ## 0.2.0 — 2026-09-29
 - Archived release: https://doi.org/10.5281/zenodo.23040628.
 - **New experimental module `rnel.off`: signed evidence and over/under/off values.** `EvidenceLedger` records reports
