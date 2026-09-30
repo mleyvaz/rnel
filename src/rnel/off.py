@@ -4,7 +4,7 @@ Two layers, deliberately kept apart:
 
 1. EvidenceLedger (sound): reports can be added and later retracted, per source. As long as no source retracts
    more than it reported, the net evidence (r, s) is non-negative and yields an ordinary Subjective Logic
-   opinion; removing a source is exactly SL cumulative *unfusion* (Jøsang 2016, ch. 12). A source found to be
+   opinion; removing a source is exactly SL cumulative *unfusion* (Jøsang 2016, ch. 13). A source found to be
    systematically inverted (it reports the opposite of the truth) is handled by `invert`, which moves its
    evidence to the complement: its reports for x become evidence for not-x. This keeps every quantity in [0, 1].
 
