@@ -1,0 +1,75 @@
+site_name: rnel
+site_description: A Python library for evidential reasoning that keeps contradiction, ignorance and retracted evidence apart.
+site_url: https://mleyvaz.github.io/rnel/
+repo_url: https://github.com/mleyvaz/rnel
+repo_name: mleyvaz/rnel
+edit_uri: ""
+copyright: MIT licence. Maikel Yelandi Leyva-Vázquez and Florentin Smarandache.
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Concepts: concepts.md
+  - API reference:
+      - rnel.sl: api/sl.md
+      - rnel.tuple: api/tuple.md
+      - rnel.operators: api/operators.md
+      - rnel.ranking: api/ranking.md
+      - rnel.decide: api/decide.md
+      - rnel.off: api/off.md
+      - rnel.text: api/text.md
+      - rnel.nn: api/nn.md
+  - How to cite: cite.md
+  - Changelog: changelog.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: true
+            members_order: source
+            docstring_style: google
+            show_if_no_docstring: true
+            filters: ["!^_"]
+            heading_level: 1
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.snippets:
+      check_paths: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -1,17 +1,37 @@
 cff-version: 1.2.0
-message: "If you use rnel, please cite this software."
+message: "If you use rnel, please cite this software and the paper that defines the logic."
 title: "rnel: Refined Neutrosophic Evidential Logic"
+abstract: "A Python library for evidential reasoning that keeps contradiction, ignorance and retracted evidence apart: RNEL evidence tuples, Subjective Logic operators, priority-product and base-rate-calibrated operators, ranking, decision policies, neural evidential heads and an experimental signed-evidence ledger."
 version: 0.2.0
 date-released: 2026-09-29
 doi: 10.5281/zenodo.23040628
-url: "https://github.com/mleyvaz/rnel"
+url: "https://mleyvaz.github.io/rnel/"
 repository-code: "https://github.com/mleyvaz/rnel"
 license: MIT
 type: software
+keywords:
+  - evidential reasoning
+  - subjective logic
+  - neutrosophic logic
+  - uncertainty
+  - contradiction
 authors:
   - family-names: "Leyva-Vázquez"
     given-names: "Maikel Yelandi"
     orcid: "https://orcid.org/0000-0001-7911-5879"
+    affiliation: "Universidad Bernardo O'Higgins; Universidad de Guayaquil"
   - family-names: "Smarandache"
     given-names: "Florentin"
     orcid: "https://orcid.org/0000-0002-5560-5926"
+    affiliation: "University of New Mexico"
+references:
+  - type: article
+    title: "The Neutrosophic (T, I, N, F), Multi-Uncertainty, n-Valued Refined, and Refined Evidential Logics with Neutrosophic Probability as Extensions of Subjective Logic"
+    authors:
+      - family-names: "Smarandache"
+        given-names: "Florentin"
+      - family-names: "Leyva-Vázquez"
+        given-names: "Maikel Yelandi"
+    year: 2026
+    doi: 10.20944/preprints202609.2584.v1
+    notes: "Preprint, under review"

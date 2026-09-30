@@ -1,5 +1,10 @@
 # rnel: Refined Neutrosophic Evidential Logic
 
+[![Documentation](https://img.shields.io/badge/docs-mleyvaz.github.io%2Frnel-blue)](https://mleyvaz.github.io/rnel/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23040628.svg)](https://doi.org/10.5281/zenodo.23040628)
+
+Documentation: https://mleyvaz.github.io/rnel/
+
 `rnel` computes with typed evidence. A probability of truth cannot say why a system is unsure: two sources that
 contradict each other, a single source with balanced evidence, and no evidence at all can all give 0.5. RNEL
 (Smarandache and Leyva-Vázquez) keeps them apart:
