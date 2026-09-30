@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased (branch feat/neutro-credal-tools, local only)
+- **New experimental module `rnel.neutro_credal`: credal tools for neutrosophic triples** (needs numpy + scipy, extra
+  `rnel[credal]`). Under the betting reading T <= P(A) <= 1 - F the triple inherits Walley's checks and tools:
+  `avoids_sure_loss`, `sure_loss_degree` (closed form (T + F - 1)/2, Theorem 3), `is_coherent`/`classify` (LP, and the
+  closed form of Theorem 2 on singletons), `natural_extension` of composite events as triples, `coherent_correction`
+  (I^E <= I, Theorem 1(c)), `singleton_intervals_check`, `singleton_natural_extension`, `singleton_correction`,
+  `idm_triple` (Corollary 2), decisions by sets (`interval_dominance`, `maximality`, `e_admissible`), the glut
+  lifting `to_glut_frame`/`GlutLifting` (Theorem 8; minimal, Belnap and disjoint frames), `glut_conjunction`
+  (N-norms as natural extensions, Theorem 9), `sl_retraction` (Theorem 5) and `credal_diagnosis`, which combines the
+  credal checks, natural extension and decision with the RNEL state (a, b, u, c) and C* from evidence per source.
+- Tests: `tests/test_neutro_credal.py`; example: `examples/neutro_credal_demo.py`.
+
 ## Unreleased (branch feat/credal, local only)
 - **New experimental module `rnel.credal`** (needs numpy + scikit-learn, extra `rnel[credal]`).
   `CredalEnsemble` wraps a scikit-learn ensemble (RandomForest, 100 trees, `min_samples_leaf=5` by default) and
