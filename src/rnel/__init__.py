@@ -12,6 +12,9 @@ Core (no dependencies beyond the standard library):
 Optional (numpy + scikit-learn):
   rnel.credal    (experimental) credal ensembles (lower/upper probabilities), their neutrosophic reading
                  (representation only), per-view evidence, between-view conflict C* and actions
+Optional (numpy + scipy):
+  rnel.neutro_credal (experimental) Walley's tools on neutrosophic triples: sure loss, coherence, natural
+                 extension, IDM, decisions by sets, glut lifting, and a one-call credal + RNEL diagnosis
 Optional (PyTorch):
   rnel.nn         typed evidential head and per-source evidential network
 """
