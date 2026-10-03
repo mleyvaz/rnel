@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased (branch feat/dsmt, local only)
+- **New experimental module `rnel.dsmt`: Dezert-Smarandache theory on small frames** (standard library only).
+  Frames under the free DSm model (hyper-power set, Venn-region codification), Shafer's model and hybrid models
+  (`Frame(atoms, model, empty=[...])`, string syntax `"A|B"`, `"A&B"`); rules `conjunctive` (= classic DSm rule on
+  the free model, = Smets/TBM with conflict on the empty set otherwise; aliases `dsmc`, `tbm`), `dempster`,
+  `yager`, `dubois_prade`, `pcr5` (Smarandache-Dezert general s-source form, canonical-form members, product
+  weights), `pcr6` (Martin-Osswald, sum weights), `pcr6_plus` (Dezert, Dezert and Smarandache 2021), `sequential`,
+  `combine_all`; decision `betp` (generalised pignistic, DSm cardinality), `dsmp` (DSmP_epsilon), `belief`,
+  `plausibility`; the binary-frame dictionary with RNEL: `tuple_to_bba`/`bba_to_tuple` (m(x)=T, m(not x)=F,
+  m(x&not x)=C, m(x|not x)=U+G, m(empty)=N), `reports_to_bba`, `opinion_to_bba`, and the credal reading
+  `bba_to_triple`/`triple_to_bba`/`belnap_probability` (free binary masses = probabilities on the Belnap frame).
+- Tests: `tests/test_dsmt.py` (published examples of Smarandache-Dezert 2005/2006, Martin-Osswald 2006,
+  Dezert-Smarandache 2008, Dezert-Dezert-Smarandache 2021, Zadeh's example; properties; optional cross-check with
+  evidencelib). Example: `examples/dsmt_demo.py`.
+
 ## Unreleased (branch feat/neutro-credal-tools, local only)
 - **New experimental module `rnel.neutro_credal`: credal tools for neutrosophic triples** (needs numpy + scipy, extra
   `rnel[credal]`). Under the betting reading T <= P(A) <= 1 - F the triple inherits Walley's checks and tools:
