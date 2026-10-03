@@ -8,7 +8,7 @@ Published sources (numbers copied from the papers; page/section given in each te
   [DS08] Dezert and Smarandache, "A new probabilistic transformation of belief mass assignment", Fusion 2008,
         arXiv:0807.3669.
   [DDS21] Dezert, Dezert and Smarandache, "Improvement of proportional conflict redistribution rules of combination
-        of basic belief assignments", JAIF 16(1), 2021 (Example 2, as reproduced and tested in the public repository
+        of basic belief assignments", Journal of Advances in Information Fusion, 2021 (Example 2, as reproduced and tested in the public repository
         github.com/mleyvaz/dsmt-rag-pcr6, test_pcr6_plus.py).
 """
 import itertools
