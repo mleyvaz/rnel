@@ -1,5 +1,38 @@
 # Changelog
 
+## Unreleased (branch feat/neutro-credal-tools, local only)
+- **New experimental module `rnel.neutro_credal`: credal tools for neutrosophic triples** (needs numpy + scipy, extra
+  `rnel[credal]`). Under the betting reading T <= P(A) <= 1 - F the triple inherits Walley's checks and tools:
+  `avoids_sure_loss`, `sure_loss_degree` (closed form (T + F - 1)/2, Theorem 3), `is_coherent`/`classify` (LP, and the
+  closed form of Theorem 2 on singletons), `natural_extension` of composite events as triples, `coherent_correction`
+  (I^E <= I, Theorem 1(c)), `singleton_intervals_check`, `singleton_natural_extension`, `singleton_correction`,
+  `idm_triple` (Corollary 2), decisions by sets (`interval_dominance`, `maximality`, `e_admissible`), the glut
+  lifting `to_glut_frame`/`GlutLifting` (Theorem 8; minimal, Belnap and disjoint frames), `glut_conjunction`
+  (N-norms as natural extensions, Theorem 9), `sl_retraction` (Theorem 5) and `credal_diagnosis`, which combines the
+  credal checks, natural extension and decision with the RNEL state (a, b, u, c) and C* from evidence per source.
+- Tests: `tests/test_neutro_credal.py`; example: `examples/neutro_credal_demo.py`.
+
+## Unreleased (branch feat/credal, local only)
+- **New experimental module `rnel.credal`** (needs numpy + scikit-learn, extra `rnel[credal]`).
+  `CredalEnsemble` wraps a scikit-learn ensemble (RandomForest, 100 trees, `min_samples_leaf=5` by default) and
+  returns per-class lower/upper probabilities over the members (`envelope`: hull, alpha-trimmed as in Nguyen,
+  Zhang & Destercke, ECSQARU 2023, doi:10.1007/978-3-031-45608-4_21, or per-class quantiles), plus evidence
+  counts (`leaf`, `votes`, `mean`). `to_neutrosophic`/`from_neutrosophic` (T = l, I = u - l, F = 1 - u) are a
+  change of representation only. Information beyond the credal set comes from per-view evidence:
+  `sup_gap_views`, `c_star_multiclass` (sup-norm extension of C*), `c_star_one_vs_rest`, `evidential_state`
+  (a, b, u, c with T = a + c, F = b + c, I = u + c) and `decide` (answer / abstain_seek_data / review_sources /
+  reject).
+- Tests: `tests/test_credal.py`.
+
+## Unreleased (branch exp/conflict-first-principles, local only)
+- **New experimental module `rnel.conflict`: between-source conflict from first principles.** `k_between`
+  (K_b = min(M+, M-), the unique measure satisfying ally consolidation, unanimity null and opposed-pair
+  additivity), `k_within`, `credal_gap`, multinomial `sup_gap`, the additive state `ConflictState` (R, S, K_w)
+  whose fusion is order-free, the normalised component C* = 2 K_b / (R + S + W), `state_from_tuple`
+  (identifiability), provenance-aware fusion (`group_counts`, `dependence_interval`, `atom_union`) and the two
+  forms of Definition 8.4 for comparison (`def84_sequential`, `def84_maxpair`). Definition 8.4 itself is unchanged.
+- Tests: `tests/test_conflict.py`.
+
 ## 0.2.0 — 2026-09-29
 - Archived release: https://doi.org/10.5281/zenodo.23040628.
 - **New experimental module `rnel.off`: signed evidence and over/under/off values.** `EvidenceLedger` records reports

@@ -64,7 +64,11 @@ def cumulative_fusion(A: Opinion, B: Opinion) -> Opinion:
         return Opinion((A.b + B.b) / 2, (A.d + B.d) / 2, 0.0, (A.a + B.a) / 2)
     b = (A.b * B.u + B.b * A.u) / k
     d = (A.d * B.u + B.d * A.u) / k
-    return Opinion(b, d, A.u * B.u / k, (A.a + B.a) / 2)
+    # Fused base rate (Josang 2016, ch. 12): weights each source's base rate by the other's
+    # uncertainty; equals the mean when u_A = u_B, and returns B's base rate when A is vacuous.
+    den_a = A.u + B.u - 2 * A.u * B.u
+    a = ((A.a * B.u + B.a * A.u - (A.a + B.a) * A.u * B.u) / den_a) if den_a > 1e-15 else (A.a + B.a) / 2
+    return Opinion(b, d, A.u * B.u / k, a)
 
 
 def averaging_fusion(A: Opinion, B: Opinion) -> Opinion:
