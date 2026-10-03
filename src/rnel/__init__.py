@@ -9,6 +9,9 @@ Core (no dependencies beyond the standard library):
   rnel.datasets   loaders for AVeriTeC, CLIMATE-FEVER and ChaosNLI
   rnel.off        (experimental) signed evidence, retraction and over/under/off values
   rnel.conflict   (experimental) between-source conflict from axioms (K_b, C*), order-free state, provenance-aware fusion
+  rnel.dsmt      (experimental) DSmT on small frames (free, Shafer and hybrid models): conjunctive/DSmC, Dempster,
+                 TBM, Yager, Dubois-Prade, PCR5, PCR6, PCR6+, BetP/DSmP, and the exact dictionary between DSm masses
+                 on {x, not x} and RNEL tuples
   rnel.neutro_stats (experimental) neutrosophic estimates a + sum b_k I_k with one labelled I per
                  indeterminacy type and source; credal, glut and gap readings
 Optional (numpy + scikit-learn):
