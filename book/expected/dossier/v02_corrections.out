@@ -1,0 +1,11 @@
+v0.2 checks OK
+  T5d_counterexample {'triple': [0.2, 0.5, 0.3], 'betting': [0.2, 0.7], 'evidential': [0.14893617021276595, 0.7446808510638298]}
+  T5d_condition {'cases': 20100, 'coincide_when_TF_zero': 100, 'strict_when_TF_pos': 20000, 'violations': 0}
+  T9c_eventwise_comonotone_LP {'cases': 1500, 'max_err': 0.0, 'min_feasible_polytopes': 8}
+  n3_coherent_are_2monotone_check {'envelopes': 30000, 'not_2monotone': 0}
+  t8_pattern_sets_examined_m3 162
+  t8_pattern_sets_nonempty_total_m3 255
+  t8_minimal_sets_m3 [[(0, 1, 1), (1, 0, 1), (1, 1, 0), (1, 1, 1)]]
+  assert_statements_per_script {'common.py': 1, 't1_reduction_hierarchy.py': 9, 't2_intervals_idm.py': 4, 't3_t4_t5_readings.py': 10, 't7_t8_lifting_operators.py': 7, 'f2_indeterminacy_profiles.py': 2, 'f1_f3_probes.py': 1}
+  f1_f3_note f1_f3_probes.py asserts only the F3 region check (Theorem 8(d)); for F1 it records F1_conjecture_consistent without stopping
+  Cor2_trivial_events {'U_empty_by_formula': 0.16666666666666666, 'L_Omega_by_formula': 0.8333333333333334}

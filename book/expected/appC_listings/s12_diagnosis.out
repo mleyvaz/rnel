@@ -1,0 +1,12 @@
+A: (T, I, F) = (0.10, 0.60, 0.30)   interval [0.10, 0.70]
+B: (T, I, F) = (0.20, 0.60, 0.20)   interval [0.20, 0.80]
+C: (T, I, F) = (0.10, 0.00, 0.90)   interval [0.10, 0.10]
+status: coherent
+A or C: (0.2, 0.6, 0.2)
+decision (maximality): ['A', 'B']
+A: a = 0.16, b = 0.20, u = 0.40, c = 0.24
+B: a = 0.14, b = 0.22, u = 0.40, c = 0.24
+C: a = 0.06, b = 0.54, u = 0.40, c = 0.00
+multiclass C* = 0.28
+interval_dominance ['A', 'B']
+e_admissible ['A', 'B']

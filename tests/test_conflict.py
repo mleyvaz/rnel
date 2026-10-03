@@ -17,6 +17,7 @@ def rand_profile(rng, nmax=6):
             for _ in range(n)]
 
 
+@pytest.mark.theorem("Section 12.4 (K_b, C* axioms)")
 def test_three_forms_of_k_between_agree():
     rng = random.Random(1)
     for _ in range(3000):
@@ -28,6 +29,7 @@ def test_three_forms_of_k_between_agree():
         assert kb >= -TOL
 
 
+@pytest.mark.theorem("Section 12.4 (C* order-free)")
 def test_order_and_bracketing_invariance():
     rng = random.Random(2)
     for _ in range(500):
@@ -43,6 +45,7 @@ def test_order_and_bracketing_invariance():
             assert abs((cf.ConflictState.of(P[0]) + st).c_star() - ref) < TOL
 
 
+@pytest.mark.theorem("Definition 16.2")
 def test_definition_8_4_sequential_is_order_dependent():
     A, B, D = (10, 0), (0, 10), (10, 0)
     assert round(cf.def84_sequential([A, B, D]), 3) == 0.579
@@ -50,6 +53,7 @@ def test_definition_8_4_sequential_is_order_dependent():
     assert cf.c_star([A, B, D]) == cf.c_star([A, D, B])
 
 
+@pytest.mark.theorem("Section 12.4 (K_b, C* axioms)")
 def test_axioms_characterising_k_between():
     rng = random.Random(3)
     for _ in range(2000):

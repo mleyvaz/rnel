@@ -1,0 +1,5 @@
+SL opinion (b, d, u): (0.5714, 0.1429, 0.2857)
+IDM triple (T, I, F): (0.5714, 0.2857, 0.1429)
+r=3.0, q=1.0: Ts+Fs = 0.933 (rq > W^2: False), betting sure loss = 0.000, chart interval [0.5000, 0.8333], match SL = True
+r=6.0, q=3.0: Ts+Fs = 1.350 (rq > W^2: True), betting sure loss = 0.175, chart interval [0.5455, 0.7273], match SL = True
+betting [0.2, 0.7] vs chart [0.1489, 0.7447]

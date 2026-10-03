@@ -1,0 +1,19 @@
+Step 1: neutrosophic triples of the four courses and their betting intervals [T, 1 - F]
+course (T, I, F)           T+I+F       interval  width stated I
+DE     (0.5, 0.1, 0.2)       0.8 [0.5, 0.8]        0.3      0.1
+SA     (0.6, 0.2, 0.4)       1.2 [0.6, 0.6]        0.0      0.2
+FM     (0.8, 0.0, 0.1)       0.9 [0.8, 0.9]        0.1      0.0
+SM     (0.4, 0.3, 0.5)       1.2 [0.4, 0.5]        0.1      0.3
+
+Theorem 1 (inverse map T = L, I = U - L, F = 1 - U): the normalised triple that the classical
+frame actually carries for each course, i.e. the natural extension on {pass, fail}:
+  DE: stated (0.5, 0.1, 0.2) -> carried (0.5, 0.3, 0.2)
+  SA: stated (0.6, 0.2, 0.4) -> carried (0.6, 0.0, 0.4)
+  FM: stated (0.8, 0.0, 0.1) -> carried (0.8, 0.1, 0.1)
+  SM: stated (0.4, 0.3, 0.5) -> carried (0.4, 0.1, 0.5)
+
+Intuitionistic and neutrosophic forms give the same intervals (Theorem 4(b): kernel = I direction):
+  DE: neutrosophic (0.5, 0.8)  intuitionistic (0.5, 0.8)  equal = True
+  SA: neutrosophic (0.6, 0.6)  intuitionistic (0.6, 0.6)  equal = True
+  FM: neutrosophic (0.8, 0.9)  intuitionistic (0.8, 0.9)  equal = True
+  SM: neutrosophic (0.4, 0.5)  intuitionistic (0.4, 0.5)  equal = True

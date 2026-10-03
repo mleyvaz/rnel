@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 — 2026-10-03 (local release candidate; not published)
+- Consolidates the modules used by *Neutrosophic Evidence*: credal and neutrosophic-credal tools,
+  order-free conflict diagnostics, refined neutrosophic statistics, RNEL-MVC and active learning,
+  DSmT, copula N-norms, plithogenic operators, and base-rate score functions.
+- Adds the explicit affine bridge `I = (1 + eps) / 2`, theorem-labelled tests, and a reproducibility
+  runner (`python -m rnel.book regenerate --check`) using only repository-relative paths.
+- Adds Python 3.10–3.13 test CI and packaging checks. Publication, tag creation, PyPI upload, and the
+  new Zenodo version remain manual owner actions.
+
 ## Unreleased (branch feat/dsmt, local only)
 - **New experimental module `rnel.dsmt`: Dezert-Smarandache theory on small frames** (standard library only).
   Frames under the free DSm model (hyper-power set, Venn-region codification), Shafer's model and hybrid models

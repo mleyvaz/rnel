@@ -1,0 +1,382 @@
+{
+ "C1": {
+  "random_charges": 5000,
+  "violations": 0,
+  "lp_vertices": 2000,
+  "non_dipole_vertices": 0,
+  "dipole_value_errors": 0
+ },
+ "C2": {
+  "cases": 600,
+  "max_error": 6.661338147750939e-16
+ },
+ "C3": {
+  "cases": 4000,
+  "empty": 2189,
+  "violations": 0
+ },
+ "C4": {
+  "envelopes": {
+   "cases": 2480,
+   "violations": 0
+  },
+  "minimality": {
+   "2": {
+    "min_size": 4,
+    "faithful_sets": [
+     [
+      "00",
+      "01",
+      "10",
+      "11"
+     ]
+    ],
+    "pattern_sets_searched": null
+   },
+   "3": {
+    "min_size": 8,
+    "faithful_sets": [
+     [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+     ]
+    ],
+    "pattern_sets_searched": null
+   },
+   "4": {
+    "atoms": 10,
+    "full_faithful_on_critical_points": true,
+    "any_atom_removable": false
+   },
+   "5": {
+    "atoms": 12,
+    "full_faithful_on_critical_points": true,
+    "any_atom_removable": false
+   },
+   "6": {
+    "atoms": 14,
+    "full_faithful_on_critical_points": true,
+    "any_atom_removable": false
+   }
+  },
+  "reduction_eps0": {
+   "natural_extensions_compared": 77760,
+   "violations": 0
+  },
+  "L_alone_region": {
+   "cases": 1500,
+   "violations": 0
+  },
+  "nonempty_iff_delta": {
+   "cases": 475,
+   "violations": 0
+  }
+ },
+ "C5": {
+  "cases": 3000,
+  "violations": 0
+ },
+ "C6": {
+  "multinomial_cases": 2903,
+  "violations": 0,
+  "binary_cases": 16199,
+  "binary_violations": 0,
+  "binary_with_overvalue": 5440,
+  "overvalue_without_undervalue": 0
+ },
+ "C6_example": [
+  {
+   "k": 0,
+   "mode": "anti",
+   "r": 15,
+   "s": 8,
+   "S": 25,
+   "T": 0.6,
+   "I": 0.08,
+   "F": 0.32,
+   "interval": [
+    0.6,
+    0.68
+   ],
+   "contains_probability": true,
+   "least_budget": 0.0,
+   "eps_star": 0.0
+  },
+  {
+   "k": 0,
+   "mode": "remove",
+   "r": 15,
+   "s": 8,
+   "S": 25,
+   "T": 0.6,
+   "I": 0.08,
+   "F": 0.32,
+   "interval": [
+    0.6,
+    0.68
+   ],
+   "contains_probability": true,
+   "least_budget": 0.0,
+   "eps_star": 0.0
+  },
+  {
+   "k": 1,
+   "mode": "anti",
+   "r": 5,
+   "s": 8,
+   "S": 15,
+   "T": 0.3333,
+   "I": 0.1333,
+   "F": 0.5333,
+   "interval": [
+    0.3333,
+    0.4667
+   ],
+   "contains_probability": true,
+   "least_budget": 0.0,
+   "eps_star": 0.0
+  },
+  {
+   "k": 1,
+   "mode": "remove",
+   "r": 10,
+   "s": 8,
+   "S": 20,
+   "T": 0.5,
+   "I": 0.1,
+   "F": 0.4,
+   "interval": [
+    0.5,
+    0.6
+   ],
+   "contains_probability": true,
+   "least_budget": 0.0,
+   "eps_star": 0.0
+  },
+  {
+   "k": 2,
+   "mode": "anti",
+   "r": -5,
+   "s": 8,
+   "S": 5,
+   "T": -1.0,
+   "I": 0.4,
+   "F": 1.6,
+   "interval": [
+    -1.0,
+    -0.6
+   ],
+   "contains_probability": false,
+   "least_budget": 0.6,
+   "eps_star": 1.0
+  },
+  {
+   "k": 2,
+   "mode": "remove",
+   "r": 5,
+   "s": 8,
+   "S": 15,
+   "T": 0.3333,
+   "I": 0.1333,
+   "F": 0.5333,
+   "interval": [
+    0.3333,
+    0.4667
+   ],
+   "contains_probability": true,
+   "least_budget": 0.0,
+   "eps_star": 0.0
+  },
+  {
+   "k": 3,
+   "mode": "anti",
+   "r": -15,
+   "s": 8,
+   "S": -5,
+   "defined": false
+  },
+  {
+   "k": 3,
+   "mode": "remove",
+   "r": 0,
+   "s": 8,
+   "S": 10,
+   "T": 0.0,
+   "I": 0.2,
+   "F": 0.8,
+   "interval": [
+    0.0,
+    0.2
+   ],
+   "contains_probability": true,
+   "least_budget": 0.0,
+   "eps_star": 0.0
+  }
+ ],
+ "C7": {
+  "product_budget_max_error": 7.105427357601002e-15,
+  "independence": {
+   "pairs": 300,
+   "sampled_values_below_formula": 0,
+   "max_attainment_gap": 4.440892098500626e-16,
+   "algebraic_T_differs": 72,
+   "algebraic_I_differs": 94
+  },
+  "counterexamples": {
+   "T_mixed_sign": {
+    "x1": [
+     -0.2,
+     0.3,
+     0.9
+    ],
+    "e1": 0.2,
+    "x2": [
+     0.5,
+     0.2,
+     0.3
+    ],
+    "e2": 0.0,
+    "natural_extension": [
+     -0.2,
+     0.44,
+     0.93
+    ],
+    "algebraic_N_norm": [
+     -0.1,
+     0.44,
+     0.93
+    ]
+   },
+   "T_both_negative": {
+    "x1": [
+     -0.2,
+     0.3,
+     0.9
+    ],
+    "e1": 0.2,
+    "x2": [
+     -0.2,
+     0.3,
+     0.9
+    ],
+    "e2": 0.2,
+    "natural_extension": [
+     -0.24,
+     0.51,
+     0.96
+    ],
+    "algebraic_N_norm": [
+     0.04,
+     0.51,
+     0.99
+    ]
+   },
+   "I_over": {
+    "x1": [
+     0.1,
+     1.2,
+     0.0
+    ],
+    "e1": 0.2,
+    "x2": [
+     0.3,
+     0.5,
+     0.2
+    ],
+    "e2": 0.0,
+    "natural_extension": [
+     0.03,
+     1.0,
+     0.2
+    ],
+    "algebraic_N_norm": [
+     0.03,
+     1.1,
+     0.2
+    ]
+   },
+   "I_standard_but_budget": {
+    "x1": [
+     1.2,
+     1.0,
+     0.0
+    ],
+    "e1": 0.2,
+    "x2": [
+     1.1,
+     1.0,
+     0.0
+    ],
+    "e2": 0.1,
+    "natural_extension": [
+     1.32,
+     0.98,
+     0.0
+    ],
+    "algebraic_N_norm": [
+     1.32,
+     1.0,
+     0.0
+    ]
+   }
+  },
+  "comonotone": {
+   "product_budget": {
+    "pairs": 150,
+    "mismatches": 0,
+    "first_mismatch": null
+   },
+   "max_budget": {
+    "pairs": 150,
+    "mismatches": 1,
+    "first_mismatch": {
+     "x1": [
+      -0.3488,
+      0.8626,
+      0.7448
+     ],
+     "x2": [
+      1.0738,
+      1.1167,
+      -0.1752
+     ],
+     "e1": 0.3541,
+     "e2": 0.2606,
+     "eJ": 0.3541,
+     "lp": [
+      -0.2804,
+      1.1167,
+      0.7448
+     ],
+     "minmaxmax": [
+      -0.3488,
+      1.1167,
+      0.7448
+     ]
+    }
+   }
+  },
+  "no_assumption": {
+   "pairs": 150,
+   "lower_bound_violations": 0,
+   "frechet_nnorm_differs": 150
+  },
+  "frechet_charge_nonsharp": {
+   "u": -0.2,
+   "v": 1.2,
+   "eps": 0.2,
+   "bound": -0.2,
+   "attainable": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "seconds": 659.8
+}

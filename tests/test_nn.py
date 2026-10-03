@@ -6,6 +6,7 @@ from rnel.nn import (PerSourceEvidential, RNELHead, fused_dissonance, rnel_from_
                      source_conflict, typed_evidential_loss)
 
 
+@pytest.mark.theorem("Theorem 5", "Definition 17.1")
 def test_tuple_sums_to_one_and_reduces_to_sl():
     e = torch.tensor([[7.0, 3.0, 0.0, 0.0, 0.0]])
     t = rnel_from_evidence(e, W=2.0)
@@ -13,6 +14,7 @@ def test_tuple_sums_to_one_and_reduces_to_sl():
     assert torch.allclose(t[0, [0, 1, 5]], torch.tensor([7 / 12, 3 / 12, 2 / 12]))
 
 
+@pytest.mark.theorem("Definition 17.1", "Definition 17.2")
 def test_head_and_loss():
     torch.manual_seed(0)
     head = RNELHead(8)
@@ -22,6 +24,7 @@ def test_head_and_loss():
     assert torch.isfinite(loss)
 
 
+@pytest.mark.theorem("Definition 17.3")
 def test_source_conflict_detects_disagreement_that_fusion_hides():
     mask = torch.ones(2, 2)
     disagree = torch.tensor([[[10.0, 0.0], [0.0, 10.0]]])   # two confident sources, opposite sides
@@ -33,6 +36,7 @@ def test_source_conflict_detects_disagreement_that_fusion_hides():
     assert c[0] > c[1]                                                        # sources: separated
 
 
+@pytest.mark.theorem("Definition 17.3")
 def test_per_source_model_shapes():
     m = PerSourceEvidential(6, hidden=16)
     x, mask = torch.randn(3, 4, 6), torch.tensor([[1, 1, 1, 0], [1, 1, 0, 0], [1, 1, 1, 1.0]])

@@ -1,0 +1,7 @@
+T1/T6 OK
+ n=2 {'samples': 3000, 'sure_loss': 0, 'asl_incoherent': 0, 'coherent': 3000, 'max_roundtrip_error': np.float64(2.220446049250313e-16)}
+ n=3 {'samples': 3000, 'sure_loss': 1457, 'asl_incoherent': 1505, 'coherent': 38, 'max_roundtrip_error': np.float64(2.220446049250313e-16)}
+ n=4 {'samples': 1500, 'sure_loss': 1400, 'asl_incoherent': 100, 'coherent': 0, 'max_roundtrip_error': np.float64(2.220446049250313e-16)}
+ C1 delta = 0.066667
+ C2 T({0,1}) = 0.2 but natural extension = 0.5
+ belief-function cases: 1500 ; n=3 envelopes all 2-monotone: True

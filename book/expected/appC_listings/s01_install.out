@@ -1,0 +1,6 @@
+rnel version: 0.3.0
+rnel.neutro_credal exports 19 names:
+  Frame, avoids_sure_loss, sure_loss_degree, is_coherent, classify
+  natural_extension, coherent_correction, singleton_intervals_check, singleton_natural_extension, singleton_correction
+  idm_triple, interval_dominance, maximality, e_admissible, GlutLifting
+  to_glut_frame, glut_conjunction, sl_retraction, credal_diagnosis

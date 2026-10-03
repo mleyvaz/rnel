@@ -1,0 +1,11 @@
+{
+  "proper_mismatch": 0.0,
+  "reachable_mismatch": 0.0,
+  "natext_max_err": 3.3306690738754696e-16,
+  "cases": 6000,
+  "reachable_cases": 303,
+  "idm_sl_identity": {
+    "cases": 2000,
+    "max_err": 3.3306690738754696e-16
+  }
+}

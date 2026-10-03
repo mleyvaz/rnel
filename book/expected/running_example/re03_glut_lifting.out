@@ -1,0 +1,16 @@
+Step 3a: each course on the 4-atom minimal lifting (Theorem 8)
+  DE (0.5, 0.1, 0.2): faithful = True  envelope = (0.5, 0.1, 0.2)  least glut mass = 0.000
+  SA (0.6, 0.2, 0.4): faithful = True  envelope = (0.6, 0.2, 0.4)  least glut mass = 0.000
+  FM (0.8, 0.0, 0.1): faithful = True  envelope = (0.8, 0.0, 0.1)  least glut mass = 0.000
+  SM (0.4, 0.3, 0.5): faithful = True  envelope = (0.4, 0.3, 0.5)  least glut mass = 0.000
+
+The intuitionistic pair of SA, (0.6, 0.4), is the triple (0.6, 0, 0.4); the neutrosophic one is (0.6, 0.2, 0.4).
+  lower P(E_I): intuitionistic 0.000  neutrosophic 0.200  -> different credal sets on the lifting, same interval [0.6, 0.6] on {pass, fail}
+
+Step 3b: minimal lifting, 13 atoms; largest envelope error = 0.0e+00
+  lower P(random-selection event over the four I events) = 0.750  (not 0.15)
+  reason: every atom misses at most one of the 12 events, so it lies in at least 3 of the 4 I events
+
+Step 3c: product lifting, 256 atoms; largest envelope error over the 12 components = 0.0e+00
+  lower P(random-selection event over the four I events) = 0.150  (= mean of the I's, Proposition 2(c))
+  least mass on 'some course is a glut' = 0.000

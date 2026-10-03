@@ -1,0 +1,25 @@
+[disagree] views [[8.0, 1.0, 1.0], [1.0, 8.0, 1.0]]
+  pooled (R, S) = (9, 11), K_w = 3, K_b = 6
+  SL cumulative fusion (b, d, u) = (0.409, 0.500, 0.091)
+  state (a, b, u, c) = (0.136, 0.227, 0.091, 0.545)  sum = 1.000
+  multiclass sup-norm C* = 0.636
+  class-0 probability per view = [0.8, 0.1], width over views = 0.700; fused (pooled) probability = 0.450
+  paraconsistent reading (T, I, F) = (0.682, 0.636, 0.773); T + F = 1.455
+    classical frame: degree of sure loss = 0.227
+    minimal glut lifting: faithful = True, least glut mass = 0.455 (= c - u = 0.455)
+    credal gap on [0.0, 1.0] = 6.000  vs (beta - alpha) K_b = 6.000
+    credal gap on [0.2, 0.7] = 3.000  vs (beta - alpha) K_b = 3.000
+
+[agree] views [[4.5, 4.5, 1.0], [4.5, 4.5, 1.0]]
+  pooled (R, S) = (9, 11), K_w = 9, K_b = 0
+  SL cumulative fusion (b, d, u) = (0.409, 0.500, 0.091)
+  state (a, b, u, c) = (0.409, 0.500, 0.091, 0.000)  sum = 1.000
+  multiclass sup-norm C* = 0.000
+  class-0 probability per view = [0.45, 0.45], width over views = 0.000; fused (pooled) probability = 0.450
+  paraconsistent reading (T, I, F) = (0.409, 0.091, 0.500); T + F = 0.909
+    classical frame: degree of sure loss = 0.000
+    minimal glut lifting: faithful = True, least glut mass = 0.000 (= c - u = -0.091)
+    credal gap on [0.0, 1.0] = 0.000  vs (beta - alpha) K_b = 0.000
+    credal gap on [0.2, 0.7] = 0.000  vs (beta - alpha) K_b = 0.000
+
+[binary pair (10,0), (0,10)] C* = 0.909; single source (10,10): C* = 0.000

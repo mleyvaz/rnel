@@ -1,0 +1,4 @@
+T7/T8/T9 OK
+ lifting m=3,4,5 faithful: {3: True, 4: True, 5: True} ; minimal size m=3: 4 ((0, 1, 1), (1, 0, 1), (1, 1, 0), (1, 1, 1))
+ T7: {'cases': 3000, 'frechet_err': np.float64(1.1102230246251565e-16), 'indep_err': 0.0, 'alg_surplus_err': np.float64(4.440892098500626e-16), 'svns_surplus_min': np.float64(-3.3306690738754696e-16), 'luk_I_diff_min': np.float64(-0.4908751366690163), 'luk_I_diff_max': np.float64(0.915381646007425)}
+ T9: {'cases': 1500, 'indep_err': np.float64(2.220446049250313e-16), 'frechet_err': np.float64(1.1102230246251565e-16), 'comon_err': np.float64(1.1102230246251565e-16)}

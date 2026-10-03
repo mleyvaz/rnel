@@ -1,0 +1,82 @@
+Frank stable form vs textbook formula, max difference 4.785061236134425e-14
+== B. radial symmetry and the surplus ==
+face identity max error 1.249000902703301e-16
+Clayton(2) min sigma on face F=0 (step 0.01): -0.056863 at I1, I2 = 0.2 0.2
+Gumbel(2) min sigma on face F=0 (step 0.01): -0.026821 at I1, I2 = 0.82 0.82
+Clayton(2) at x1=x2=(0.7,0.3,0): C(0.3,0.3)=0.217072 C(0.7,0.7)=0.569652 sigma=-0.047420  [= C_hat(0.3,0.3)-C(0.3,0.3) = 0.169652-0.217072]
+Gumbel(2) at x1=x2=(0.3,0.7,0): C(0.7,0.7)=0.603859 C(0.3,0.3)=0.182196 sigma=-0.021663
+shuffle S: copula + radially symmetric + exchangeable on grid 1/24: True  sigma_S(x,x) = -1/4
+min sigma on simplex grid 1/20: Pi -1.943e-16
+min sigma on simplex grid 1/20: M -1.943e-16
+min sigma on simplex grid 1/20: W -3.331e-16
+min sigma on simplex grid 1/20: Frank(-20) -2.220e-16
+min sigma on simplex grid 1/20: Frank(-5) -2.220e-16
+min sigma on simplex grid 1/20: Frank(-1) -8.604e-16
+min sigma on simplex grid 1/20: Frank(1) -6.661e-16
+min sigma on simplex grid 1/20: Frank(5) -2.220e-16
+min sigma on simplex grid 1/20: Frank(20) -1.943e-16
+min sigma on simplex grid 1/20: Clayton(2) -5.686e-02
+min sigma on simplex grid 1/20: Gumbel(2) -2.669e-02
+sigma_W closed form max error 4.440892098500626e-16
+== C. Kendall tau and copula parameters ==
+Clayton(2): tau closed form 0.5000, numerical integration 0.5000
+Gumbel(2): tau closed form 0.5000, numerical integration 0.5000
+Frank(5): tau closed form 0.4567, numerical integration 0.4567
+Frank(-5): tau closed form -0.4567, numerical integration -0.4567
+Frank inversion round-trip max error 7.038813976123492e-14
+Frank theta for tau = 0.5: 5.736
+Clayton(2): true tau 0.5000; 20 samples of n=2000: mean tau 0.5004, mean theta_hat 2.004 (sd 0.064)
+Gumbel(2): true tau 0.5000; 20 samples of n=2000: mean tau 0.5015, mean theta_hat 2.008 (sd 0.055)
+Frank(5): true tau 0.4567; 20 samples of n=2000: mean tau 0.4571, mean theta_hat 5.008 (sd 0.149)
+Frank(-5): true tau -0.4567; 20 samples of n=2000: mean tau -0.4558, mean theta_hat -4.987 (sd 0.156)
+== D. tail dependence ==
+Clayton(2): lambda_L 0.7071 (numeric 0.7071), lambda_U 0.0000 (numeric 0.0000)
+Gumbel(2): lambda_L 0.0000 (numeric 0.0033), lambda_U 0.5858 (numeric 0.5858)
+Frank(5): lambda_L 0.0000 (numeric 0.0000), lambda_U 0.0000 (numeric 0.0000)
+== E. MCDM example ==
+W      A1=0.4000 A2=0.5667 A3=0.5000 A4=0.4800  ranking: A2 > A3 > A4 > A1
+-20.0  A1=0.4021 A2=0.5667 A3=0.5001 A4=0.4802  ranking: A2 > A3 > A4 > A1
+-5.0   A1=0.4338 A2=0.5716 A3=0.5159 A4=0.4984  ranking: A2 > A3 > A4 > A1
+-1.0   A1=0.4994 A2=0.5879 A3=0.5618 A4=0.5457  ranking: A2 > A3 > A4 > A1
+Pi     A1=0.5252 A2=0.5945 A3=0.5807 A4=0.5647  ranking: A2 > A3 > A4 > A1
+1.0    A1=0.5524 A2=0.6015 A3=0.6009 A4=0.5848  ranking: A2 > A3 > A4 > A1
+5.0    A1=0.6436 A2=0.6221 A3=0.6677 A4=0.6510  ranking: A3 > A4 > A1 > A2
+20.0   A1=0.7427 A2=0.6331 A3=0.7259 A4=0.7090  ranking: A1 > A3 > A4 > A2
+M      A1=0.7833 A2=0.6333 A3=0.7333 A4=0.7167  ranking: A1 > A3 > A4 > A2
+order independence (associativity) max error 1.1102230246251565e-16
+scores non-decreasing in theta on the sweep: True
+crossing A2-A3 at theta = 1.045 (Kendall tau 0.115)
+crossing A2-A4 at theta = 2.287 (Kendall tau 0.242)
+crossing A1-A2 at theta = 3.589 (Kendall tau 0.356)
+crossing A1-A4 at theta = 6.601 (Kendall tau 0.544)
+crossing A1-A3 at theta = 11.665 (Kendall tau 0.705)
+regime {'theta_from': '-inf (W)', 'theta_to': 1.0453957720585803, 'ranking': ['A2', 'A3', 'A4', 'A1']}
+regime {'theta_from': 1.0453957720585803, 'theta_to': 2.287014971004612, 'ranking': ['A3', 'A2', 'A4', 'A1']}
+regime {'theta_from': 2.287014971004612, 'theta_to': 3.58918758729896, 'ranking': ['A3', 'A4', 'A2', 'A1']}
+regime {'theta_from': 3.58918758729896, 'theta_to': 6.601294274339413, 'ranking': ['A3', 'A4', 'A1', 'A2']}
+regime {'theta_from': 6.601294274339413, 'theta_to': 11.665219034433221, 'ranking': ['A3', 'A1', 'A4', 'A2']}
+regime {'theta_from': 11.665219034433221, 'theta_to': '+inf (M)', 'ranking': ['A1', 'A3', 'A4', 'A2']}
+W-M score brackets {'A1': (0.4, 0.7833), 'A2': (0.5667, 0.6333), 'A3': (0.5, 0.7333), 'A4': (0.48, 0.7167)}
+interval dominance (lower score of a > upper score of b): {}
+all Frank scores inside the W-M bracket: True
+Theorem 9(b) triple for A2 criteria 1 and 3: (0.3999999999999999, 0.25, 0.3)  N_W: (0.3999999999999999, 0.3, 0.3)  N_M: (0.45, 0.25, 0.3)
+figure written
+== F. theta from synthetic evidence counts ==
+first five items (r1,q1,r2,q2): [(4, 4, 6, 8), (1, 6, 2, 6), (4, 5, 4, 9), (3, 4, 8, 6), (6, 4, 7, 4)]
+Kendall tau-b between T1 and T2 over 60 items: 0.5618
+theta: Frank 6.990 (bootstrap 90% interval [4.823, 9.846]); Clayton 2.564; Gumbel 2.282
+item 0 conjunction theta_lo (np.float64(0.2643), np.float64(0.2562), np.float64(0.5819))
+item 0 conjunction theta_hat (np.float64(0.2935), np.float64(0.2423), np.float64(0.5534))
+item 0 conjunction theta_hi (np.float64(0.3176), np.float64(0.2296), np.float64(0.5315))
+item 0 conjunction W (0.0, np.float64(0.325), np.float64(0.9))
+item 0 conjunction Pi (np.float64(0.15), np.float64(0.3), np.float64(0.7))
+item 0 conjunction M (np.float64(0.375), np.float64(0.2), np.float64(0.5))
+== G. exercises ==
+ex1 W (0.1, 0.5, 0.4) score 0.4000
+ex1 Pi (0.3, 0.44, 0.36) score 0.5000
+ex1 M (0.5, 0.3, 0.2) score 0.6667
+ex1 sigma {'W': 0.0, 'Pi': 0.09999999999999987, 'M': 0.0}
+ex2 tau=0.4: {'tau': 0.4, 'clayton': 1.3333333333333335, 'gumbel': 1.6666666666666667, 'frank': 4.161064254922509}
+ex3 Clayton(2) at x1=x2=(0.8,0.2,0): {'C_02': 0.14285714285714288, 'C_08': 0.6859943405700354, 'sigma': -0.056862802287107495}
+ex3 Gumbel(2) at x1=x2=(0.3,0.7,0): {'C_07': 0.603859005393268, 'C_03': 0.1821955590293646, 'diag_check': 1.1102230246251565e-16, 'sigma': -0.021663446363903466}
+done

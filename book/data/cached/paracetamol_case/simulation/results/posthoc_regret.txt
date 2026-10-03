@@ -1,0 +1,18 @@
+
+O1_abs_error: regret vs best non-oracle policy per scenario
+  interval-learned       max 0.0198  mean 0.0056
+  typed (ties->IDENT)    max 0.0223  mean 0.0075
+  typed (ties->MORE)     max 0.0315  mean 0.0118
+  random                 max 0.0551  mean 0.0283
+  always IDENT           max 0.0779  mean 0.0280
+  always MORE            max 0.0792  mean 0.0292
+  always LARGER          max 0.0807  mean 0.0280
+
+O2_verdict_loss: regret vs best non-oracle policy per scenario
+  interval-learned       max 0.0092  mean 0.0023
+  typed (ties->IDENT)    max 0.1168  mean 0.0416
+  random                 max 0.1286  mean 0.0612
+  typed (ties->MORE)     max 0.1419  mean 0.0484
+  always IDENT           max 0.1709  mean 0.0536
+  always MORE            max 0.1922  mean 0.0676
+  always LARGER          max 0.1936  mean 0.0620

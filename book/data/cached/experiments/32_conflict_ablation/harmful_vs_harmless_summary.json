@@ -1,0 +1,96 @@
+{
+ "dsa": {
+  "auroc_swapped": {
+   "rnel_full": 0.8336662049861496,
+   "rnel_support_only": 0.6854349030470914,
+   "rnel_conflict_only": 0.8676537396121884,
+   "knn_inconsistency": 0.5810346260387812,
+   "mv_lof": 0.4965457063711912,
+   "iforest": 0.5204404432132964,
+   "hoad": 0.8779141274238226
+  },
+  "auroc_swapped_full_minus_best_nonrnel": [
+   -0.04424792243767295,
+   -0.05638559556786686,
+   -0.029210387811634344,
+   "hoad"
+  ],
+  "prauc_swapped": {
+   "rnel_full": 0.7634008990645703,
+   "rnel_support_only": 0.6426218105092729,
+   "rnel_conflict_only": 0.8659561000128045,
+   "knn_inconsistency": 0.5679695473965308,
+   "mv_lof": 0.4963463004777524,
+   "iforest": 0.5110069493086863,
+   "hoad": 0.805175983808363
+  },
+  "prauc_swapped_full_minus_best_nonrnel": [
+   -0.041775084743792656,
+   -0.06276695366822165,
+   -0.017897328083785986,
+   "hoad"
+  ],
+  "auroc_all": {
+   "rnel_full": 0.8882411511234226,
+   "rnel_support_only": 0.7162119113573407,
+   "rnel_conflict_only": 0.9119324407510003,
+   "knn_inconsistency": 0.7257950138504154,
+   "mv_lof": 0.5111886734379809,
+   "iforest": 0.530686672822407,
+   "hoad": 0.9373047091412744
+  },
+  "auroc_all_full_minus_best_nonrnel": [
+   -0.04906355801785178,
+   -0.05462011388119424,
+   -0.043822868574945995,
+   "hoad"
+  ]
+ },
+ "har": {
+  "auroc_swapped": {
+   "rnel_full": 0.7841655328798186,
+   "rnel_support_only": 0.7603877551020408,
+   "rnel_conflict_only": 0.4796077097505669,
+   "knn_inconsistency": 0.6221258503401359,
+   "mv_lof": 0.49294557823129254,
+   "iforest": 0.5035102040816326,
+   "hoad": 0.546814058956916
+  },
+  "auroc_swapped_full_minus_best_nonrnel": [
+   0.1620396825396827,
+   0.14426822562358282,
+   0.17936085600907042,
+   "knn_inconsistency"
+  ],
+  "prauc_swapped": {
+   "rnel_full": 0.8130226271616054,
+   "rnel_support_only": 0.7981244518110351,
+   "rnel_conflict_only": 0.5453345670953581,
+   "knn_inconsistency": 0.5717303492639546,
+   "mv_lof": 0.4969030724621697,
+   "iforest": 0.4964893414526744,
+   "hoad": 0.5011956600014125
+  },
+  "prauc_swapped_full_minus_best_nonrnel": [
+   0.24129227789765084,
+   0.22334533629661193,
+   0.2581369208788048,
+   "knn_inconsistency"
+  ],
+  "auroc_all": {
+   "rnel_full": 0.8613795666414713,
+   "rnel_support_only": 0.8156191735953641,
+   "rnel_conflict_only": 0.6201113630637441,
+   "knn_inconsistency": 0.8448252708490802,
+   "mv_lof": 0.5112083648274125,
+   "iforest": 0.5348324514991182,
+   "hoad": 0.7533897707231041
+  },
+  "auroc_all_full_minus_best_nonrnel": [
+   0.016554295792391094,
+   0.007487562988158134,
+   0.026106843663391326,
+   "knn_inconsistency"
+  ]
+ }
+}

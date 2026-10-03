@@ -1,0 +1,2 @@
+F1 min surplus by copula: {'Pi': 0.0004, 'M': -0.0, 'W': -0.0, 'FGM(-1.0)': 0.0001, 'FGM(-0.5)': 0.0002, 'FGM(0.5)': 0.0006, 'FGM(1.0)': 0.0008, 'Clayton(0.5)': -0.0207, 'Clayton(2.0)': -0.0461, 'Clayton(8.0)': -0.0286, 'Frank(-5.0)': 0.0, 'Frank(-1.0)': 0.0003, 'Frank(1.0)': 0.0006, 'Frank(5.0)': 0.0005, 'survClayton(2.0)': -0.0451, 'Gumbel(2.0)': -0.0171, 'survGumbel(2.0)': -0.0183, 'Plackett(3.0)': 0.0008, 'Plackett(0.3)': 0.0001}
+F3 region mismatches (disjoint: T+I+F<=1; Belnap: T+I<=1 and F+I<=1): {'disjoint': np.int64(0), 'belnap': np.int64(0)}

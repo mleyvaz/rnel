@@ -1,0 +1,36 @@
+DEMO credal interval [0.286, 0.786] width 0.500; S = 14
+DEMO p(x) = NNumber(0.2857 +0.1429*I_C[trial A] +0.07143*I_C[cohort B] +0.1429*I_N[cohort B] +0.1429*I_G) range [0.2857, 0.7857] width 0.5000
+DEMO width by type {'C': 0.2143, 'N': 0.1429, 'G': 0.1429} relative {'C': 0.429, 'N': 0.286, 'G': 0.286}
+DEMO width by source {'trial A': 0.1429, 'cohort B': 0.2143, 'G': 0.1429} relative {'trial A': 0.286, 'cohort B': 0.429, 'G': 0.286}
+DEMO p(x)+p(not x): symbols kept 1.000 (width 0); interval arithmetic [0.500, 1.500]
+DEMO glut reading: total 1.214; p(x) range [0.500, 0.786] width 0.286; p(not x) range [0.429, 0.714]
+DEMO gap reading: total 0.857; p(x) range [0.286, 0.643] width 0.357
+DEMO p(not x) range [0.214, 0.714]; glut and gap together: total 1.0714
+RANDOM 20000 cases, max errors {'range_vs_idm': 1.1e-16, 'coherence': 2.2e-16, 'width_vs_named': 1.1e-16, 'glut_width': 1.1e-16, 'glut_lower': 2.8e-16, 'gap_total': 2.2e-16, 'glut_total': 4.4e-16, 'single_symbol_idm': 0.0, 'multi_source_range': 4.4e-16}
+RECON L=0.3571 U=0.7857 gap=0.4286 named total=0.4286; T=0.3571 I=0.4286 F=0.2143; by type {'C': 0.0714, 'U': 0.1429, 'N': 0.0714, 'G': 0.1429}
+RECON glut reading: p(x) range [0.4286, 0.7857] width 0.3571; lower of not x 0.2857; total 1.0714
+CASE rows 22, used 21, counts {'t': 4.0, 'f': 8.0, 'c': 1.0, 'v': 2.0, 'A': 6.0}
+CASE 2026 range [0.174, 0.652] width 0.478; I_C 0.043 I_U 0.087 I_A 0.261 I_G 0.087; recomputed with rnel, max diff 4.3e-05
+CASE main 2013 n 1 range [0.0, 1.0] width 1.0; C 0.0 U 0.0 A 0.3333 G 0.6667; dominant I_G
+CASE main 2016 n 5 range [0.2857, 1.0] width 0.7143; C 0.0 U 0.1429 A 0.2857 G 0.2857; dominant I_G = I_A (tie)
+CASE main 2019 n 6 range [0.25, 1.0] width 0.75; C 0.0 U 0.25 A 0.25 G 0.25; dominant I_G = I_A = I_U (tie)
+CASE main 2020 n 7 range [0.3333, 1.0] width 0.6667; C 0.0 U 0.2222 A 0.2222 G 0.2222; dominant I_G = I_A = I_U (tie)
+CASE main 2021 n 8 range [0.4, 1.0] width 0.6; C 0.0 U 0.2 A 0.2 G 0.2; dominant I_G = I_A = I_U (tie)
+CASE main 2024 n 11 range [0.3077, 0.8462] width 0.5385; C 0.0 U 0.1538 A 0.2308 G 0.1538; dominant I_A
+CASE main 2026 n 21 range [0.1739, 0.6522] width 0.4783; C 0.0435 U 0.087 A 0.2609 G 0.087; dominant I_A
+CASE S1 2026 {'lower': '0.0', 'upper': '0.8261', 'width': '0.8261', 'w_I_U': '0.4348', 'dominant': 'I_U'}
+CASE identification rows 9 {'t': 0, 'f': 8, 'c': 1, 'v': 0, 'A': 0}
+CASE A4 {'year': '2016', 'k': '2', 'rows': 'P02a P02b', 'pooled_ratio': '1.249', 'ci_low': '0.884', 'ci_high': '1.765', 'log_ci_width': '0.6917', 'tau2': '0.0523', 'I2': '0.835'}
+CASE A4 {'year': '2019', 'k': '2', 'rows': 'P02a P02b', 'pooled_ratio': '1.249', 'ci_low': '0.884', 'ci_high': '1.765', 'log_ci_width': '0.6917', 'tau2': '0.0523', 'I2': '0.835'}
+CASE A4 {'year': '2020', 'k': '2', 'rows': 'P02a P02b', 'pooled_ratio': '1.249', 'ci_low': '0.884', 'ci_high': '1.765', 'log_ci_width': '0.6917', 'tau2': '0.0523', 'I2': '0.835'}
+CASE A4 {'year': '2021', 'k': '3', 'rows': 'P02a P02b P05', 'pooled_ratio': '1.209', 'ci_low': '1.031', 'ci_high': '1.417', 'log_ci_width': '0.318', 'tau2': '0.0129', 'I2': '0.672'}
+CASE A4 {'year': '2024', 'k': '4', 'rows': 'P02a P02b P05 P06a', 'pooled_ratio': '1.147', 'ci_low': '1.021', 'ci_high': '1.289', 'log_ci_width': '0.2326', 'tau2': '0.0097', 'I2': '0.771'}
+CASE A4 {'year': '2026', 'k': '6', 'rows': 'P02a P02b P05 P06a P07a P10a', 'pooled_ratio': '1.114', 'ci_low': '1.039', 'ci_high': '1.195', 'log_ci_width': '0.1398', 'tau2': '0.004', 'I2': '0.638'}
+SIM pi=0.0 {'typed (ties->IDENT)': 0.0647, 'interval-learned': 0.0424, 'always MORE': 0.0437, 'always LARGER': 0.0425, 'always IDENT': 0.1203} O2 typed 0.1173 learned 0.0828 best: interval-learned
+SIM pi=0.25 {'typed (ties->IDENT)': 0.0806, 'interval-learned': 0.0831, 'always MORE': 0.0836, 'always LARGER': 0.0818, 'always IDENT': 0.1174} O2 typed 0.1709 learned 0.1693 best: typed (ties->IDENT)
+SIM pi=0.5 {'typed (ties->IDENT)': 0.0971, 'interval-learned': 0.1169, 'always MORE': 0.1181, 'always LARGER': 0.1148, 'always IDENT': 0.1175} O2 typed 0.2394 learned 0.2486 best: typed (ties->IDENT)
+SIM pi=0.75 {'typed (ties->IDENT)': 0.1172, 'interval-learned': 0.1215, 'always MORE': 0.1577, 'always LARGER': 0.1565, 'always IDENT': 0.1214} O2 typed 0.2967 learned 0.2436 best: typed (ties->IDENT)
+SIM pi=1.0 {'typed (ties->IDENT)': 0.1283, 'interval-learned': 0.1146, 'always MORE': 0.1932, 'always LARGER': 0.1947, 'always IDENT': 0.114} O2 typed 0.3636 learned 0.2469 best: always IDENT
+SIM regret {'O1': {'interval-learned': {'max': 0.0198, 'mean': 0.0056}, 'typed (ties->IDENT)': {'max': 0.0223, 'mean': 0.0075}, 'typed (ties->MORE)': {'max': 0.0315, 'mean': 0.0118}, 'random': {'max': 0.0551, 'mean': 0.0283}, 'always IDENT': {'max': 0.0779, 'mean': 0.028}, 'always MORE': {'max': 0.0792, 'mean': 0.0292}, 'always LARGER': {'max': 0.0807, 'mean': 0.028}}, 'O2': {'interval-learned': {'max': 0.0092, 'mean': 0.0023}, 'typed (ties->IDENT)': {'max': 0.1168, 'mean': 0.0416}, 'random': {'max': 0.1286, 'mean': 0.0612}, 'typed (ties->MORE)': {'max': 0.1419, 'mean': 0.0484}, 'always IDENT': {'max': 0.1709, 'mean': 0.0536}, 'always MORE': {'max': 0.1922, 'mean': 0.0676}, 'always LARGER': {'max': 0.1936, 'mean': 0.062}}}
+SIM tie share range [0.162, 0.262] O1 MCSE range [0.0008, 0.0025]
+ALL CHECKS PASSED

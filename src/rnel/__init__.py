@@ -26,5 +26,5 @@ Optional (PyTorch):
 from .sl import Opinion
 from .tuple import Reports, RNELTuple, fused_contradiction, rnel_tuple, sl_opinion
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __all__ = ["Opinion", "Reports", "RNELTuple", "rnel_tuple", "sl_opinion", "fused_contradiction"]

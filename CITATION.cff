@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use rnel, please cite this software and the paper that defines the logic."
 title: "rnel: Refined Neutrosophic Evidential Logic"
-abstract: "A Python library for evidential reasoning that keeps contradiction, ignorance and retracted evidence apart: RNEL evidence tuples, Subjective Logic operators, priority-product and base-rate-calibrated operators, ranking, decision policies, neural evidential heads and an experimental signed-evidence ledger."
-version: 0.2.0
-date-released: 2026-09-29
+abstract: "A toolkit for neutrosophic evidence: evidence tuples, Subjective Logic, credal and conflict diagnostics, refined neutrosophic statistics, DSmT, plithogenic and copula operators, learning utilities, and reproducible book computations."
+version: 0.3.0
+date-released: 2026-10-03
 doi: 10.5281/zenodo.23040628
 url: "https://mleyvaz.github.io/rnel/"
 repository-code: "https://github.com/mleyvaz/rnel"

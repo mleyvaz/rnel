@@ -1,0 +1,14 @@
+Check 1 (translation tau): formulas 4000 max error 4.440892098500626e-16
+Check 2 (L_NP validities): 3000 random cases; violations {'I_nonneg': 0, 'I_neg_invariant': 0, 'normalised': 0, 'T_monotone': 0, 'I_union_bound': 0, 'I_true_zero': 0} max of I(f|g)-I(f)-I(g)-I(f&g) 2.220446049250313e-16
+   counterexample to subadditivity: {'I_p': 0.0, 'I_q': 0.0, 'I_por': 0.5, 'I_pand': 0.5}
+Check 3 (C1 pattern): coherent feasible = False ; weak (normalised dual) feasible = True
+   C2 pattern T(p)=.5, T(p|q)=.2: weak feasible = True ; coherent (credal LP) feasible = False
+Check 5 (faithful regions, Theorem 8): 3000 points, mismatches {'S_min': 0, 'S_Bel': 0, 'S_dis': 0}
+Check 4 (restricted-domain completeness via Farkas): {'cases': 600, 'realisable': 346, 'not_realisable': 254, 'certificates_valid': 254, 'certificates_bad': 0, 'envelope_err': 4.440892098500626e-16, 'sound_violations': 0, 'sound_instances': 12000}
+Check 6 (lifted validities): violations {'I_same_atoms': 0, 'I_conj_ge_max': 0, 'T_conj_frechet': 0, 'F_conj_ge_max': 0, 'Belnap_region': 0} ; tightness of Frechet bound on S_min, max error 1.1102230246251565e-16
+   formulas enumerated: 302
+Check 7 (T-consequence = LP / FDE / K3): 14400 pairs, mismatches {'S_min_vs_LP': 0, 'S_Bel_vs_FDE': 0, 'S_dis_vs_K3': 0} ; explosion / excluded middle: {'S_min': {'explosion': False, 'excluded_middle': True}, 'S_Bel': {'explosion': False, 'excluded_middle': False}, 'S_dis': {'explosion': True, 'excluded_middle': False}}
+Check 8 (NP-hardness reduction): 150 CNFs, mismatches {'S_min': 0, 'S_Bel': 0, 'S_dis': 0}
+Check 10 (I not definable on S_min): T/F disagreements over 500 formulas = 0 ; I(p) = 1 versus 0
+Check 9 (I-sensitive consequence on S_min = LP + variable inclusion): 14400 pairs, 5169 valid, mismatches 0
+Check 11 (signed liftings): exact representation on S_min of 2000 triples in [-1,2]^3, max error 6.661338147750939e-16 ; {'cases': 400, 'realisable': 255, 'not_realisable': 145, 'certificates_valid': 145, 'certificates_bad': 0, 'envelope_err': 8.881784197001252e-16, 'off_values_realised': 233}

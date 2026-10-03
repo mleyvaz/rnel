@@ -1,0 +1,181 @@
+{
+ "T10b_LP_3000_maxerr": 2.220446049250313e-16,
+ "T10a_copulas": [
+  "Pi",
+  "M",
+  "W",
+  "FGM(1)",
+  "FGM(-0.5)",
+  "Frank(1)",
+  "Frank(-8)",
+  "Plackett(3)",
+  "Plackett(0.3)",
+  "Clayton(0.5)",
+  "Clayton(4)",
+  "survGumbel(2)",
+  "Gumbel(3)",
+  "Joe(2)"
+ ],
+ "T10a_pairs_per_copula": 400,
+ "T10a_monotonicity_violations": 0,
+ "T10a_attainment_maxerr": 3.3306690738754696e-16,
+ "T10c_truth_M_minus_W_at_c=0.8": -0.24,
+ "T10c_truth_M_minus_W_at_c=0.2": 0.24,
+ "T11_bruteforce_1500_per_copula": {
+  "Pi": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 3.5000278736172117e-16,
+   "max_falsity_diff": 3.0531133177191805e-16,
+   "sigma_formula_err": 4.163336342344337e-16
+  },
+  "M": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 3.0804282438011266e-16,
+   "max_falsity_diff": 2.498001805406602e-16,
+   "sigma_formula_err": 4.718447854656915e-16
+  },
+  "W": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 3.4697848553033496e-16,
+   "max_falsity_diff": 2.220446049250313e-16,
+   "sigma_formula_err": 4.163336342344337e-16
+  },
+  "FGM(1)": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 3.469446951953614e-16,
+   "max_falsity_diff": 3.469446951953614e-16,
+   "sigma_formula_err": 4.371503159461554e-16
+  },
+  "FGM(-0.5)": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 3.413712678810292e-16,
+   "max_falsity_diff": 2.914335439641036e-16,
+   "sigma_formula_err": 4.85722573273506e-16
+  },
+  "Frank(1)": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 3.027371018359216e-16,
+   "max_falsity_diff": 4.0419056990259605e-16,
+   "sigma_formula_err": 4.2327252813834093e-16
+  },
+  "Frank(-8)": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 2.988483639570951e-16,
+   "max_falsity_diff": 2.7755575615628914e-16,
+   "sigma_formula_err": 5.273559366969494e-16
+  },
+  "Plackett(3)": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 3.3306690738754696e-16,
+   "max_falsity_diff": 5.689893001203927e-16,
+   "sigma_formula_err": 4.822531263215524e-16
+  },
+  "Plackett(0.3)": {
+   "radially_symmetric": true,
+   "truth_err": 0,
+   "falsity_formula_err": 3.054729413252001e-16,
+   "max_falsity_diff": 3.885780586188048e-16,
+   "sigma_formula_err": 3.885780586188048e-16
+  },
+  "Clayton(0.5)": {
+   "radially_symmetric": false,
+   "truth_err": 0,
+   "falsity_formula_err": 3.1051550219984847e-16,
+   "max_falsity_diff": 0.02728580844532369,
+   "sigma_formula_err": 4.163336342344337e-16
+  },
+  "Clayton(4)": {
+   "radially_symmetric": false,
+   "truth_err": 0,
+   "falsity_formula_err": 3.452099717193846e-16,
+   "max_falsity_diff": 0.05552482244904544,
+   "sigma_formula_err": 5.030698080332741e-16
+  },
+  "survGumbel(2)": {
+   "radially_symmetric": false,
+   "truth_err": 0,
+   "falsity_formula_err": 3.3458479042902667e-16,
+   "max_falsity_diff": 0.025463098779007876,
+   "sigma_formula_err": 4.649058915617843e-16
+  },
+  "Gumbel(3)": {
+   "radially_symmetric": false,
+   "truth_err": 0,
+   "falsity_formula_err": 3.5518463170625125e-16,
+   "max_falsity_diff": 0.0232393067034396,
+   "sigma_formula_err": 4.753142324176451e-16
+  },
+  "Joe(2)": {
+   "radially_symmetric": false,
+   "truth_err": 0,
+   "falsity_formula_err": 3.2612801348363973e-16,
+   "max_falsity_diff": 0.0527068402999179,
+   "sigma_formula_err": 4.0245584642661925e-16
+  }
+ },
+ "P2a_symbolic_residual": "0",
+ "T11b_symbolic_residual": "0",
+ "P2_nary_min_candidates_minus_LP": {
+  "max": 0.14283668330970273,
+  "min": -2.220446049250313e-16,
+  "share_positive": 0.955
+ },
+ "A3_equal_pool_T": {
+  "weighted_sum": 0.6233,
+  "minimal_lifting_10_atoms": 0.6667
+ },
+ "A3_contradiction_pool_T": {
+  "weighted_sum": 0.61,
+  "minimal_lifting_10_atoms": 0.6317
+ },
+ "A4_graduation_I_mean": {
+  "mean_of_lowers": 0.15,
+  "minimal_lifting_13_atoms": 0.75
+ },
+ "C3b_fuzzy_plus_IFpair_faithful_3atom_sets": [
+  [
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    1,
+    0,
+    1
+   ],
+   [
+    1,
+    1,
+    0
+   ]
+  ]
+ ],
+ "Sec12_segment_lower_envelope_mobius": {
+  "(0,)": 0.2,
+  "(1,)": 0.3,
+  "(2,)": 0.1,
+  "(0, 1)": 0.0,
+  "(0, 2)": 0.2,
+  "(1, 2)": 0.2,
+  "(0, 1, 2)": 0.0
+ },
+ "Zadeh": {
+  "conflict": 0.99,
+  "dempster_mC": 1.0,
+  "PCR5": {
+   "A": 0.486,
+   "B": 0.486,
+   "C": 0.028
+  },
+  "delta_LP": 0.45
+ }
+}

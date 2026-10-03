@@ -1,0 +1,6 @@
+independent  (0.3, 0.52, 0.44)
+none         (0.1, 0.4, 0.3)
+comonotone   (0.5, 0.4, 0.3)
+none (LP)    (0.1, 0.4, 0.3)
+classical credal (T, I, F) = (0.3, 0.34, 0.36) | algebraic N-norm = (0.3, 0.44, 0.36)
+classical credal I = 0.34 | algebraic I = 0.44 | surplus = 0.1 | I1 F2 + I2 F1 = 0.1

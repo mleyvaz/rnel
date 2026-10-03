@@ -1,0 +1,19 @@
+Step 4a: Table 8 recomputed (probability that Jenifer graduates, classical frame)
+model                          fuzzy          interval    intuitionistic      neutrosophic
+indep.                         0.096    [0.019, 0.189]    [0.096, 0.216]    [0.096, 0.216]
+comon. in subject              0.200    [0.060, 0.300]    [0.200, 0.300]    [0.200, 0.300]
+comonotone                     0.400    [0.200, 0.500]    [0.400, 0.500]    [0.400, 0.500]
+no assump. (LP)       [0.000, 0.400]    [0.000, 0.500]    [0.000, 0.500]    [0.000, 0.500]
+  all 16 cells agree with Table 8 of the book
+
+Step 4b: triple of 'graduates' on the product lifting (T of all, I of some, F of some)
+  no assumption (LP, 256 atoms)    (0.000, 0.300, 0.500)
+  strong independence (vertices)   (0.096, 0.496, 0.784)
+  comonotone (closed form)         (0.400, 0.300, 0.500)
+  comonotone within subject        (0.200, 0.440, 0.700)
+
+Step 4c: plithogenic indeterminacy of graduation (switch 1/2 on the I events)
+  1/2-switch, strong independence  = 0.248
+  1/2-switch, comonotone           = 0.150
+  1/2-switch, no assumption (LP)   = 0.150
+  random-selection mean, any model = 0.150

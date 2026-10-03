@@ -1,0 +1,32 @@
+C1 Delta_eps equivalences/offset lemma/norm identity: 5000 charges, violations 0 | LP vertices 2000 non-dipole 0 | dipole max errors 0
+C2 degree of sure loss of a charge = nu(q): 600 charges, max error 6.661338147750939e-16
+C3 classical frame: nonempty iff T+F<=1, T,F<=1+eps; L=max(T,-eps), U=min(1-F,1+eps): 4000 cases, 2189 empty, violations 0
+C4a L+- envelopes (L=max(x,-eps), U=1+eps, nonempty iff max x<=1+eps), m=1..6: 2480 LPs, violations 0
+C4b m=2 exhaustive: minimal faithful size 4, sets [['00', '01', '10', '11']]
+C4b m=3 exhaustive: minimal faithful size 8, sets [['000', '001', '010', '011', '100', '101', '110', '111']]
+C4b m=4: L+- (10 atoms) faithful on critical points True; some atom removable False
+C4b m=5: L+- (12 atoms) faithful on critical points True; some atom removable False
+C4b m=6: L+- (14 atoms) faithful on critical points True; some atom removable False
+C4c reduction at eps=0 (natural extension of every event of L+- vs Theorem 8 on L): 77760 LPs, violations 0
+C4d faithful region of minimal lifting L under Delta_eps: 1500 cases, violations 0
+C4e K_eps(x) nonempty iff delta(x) <= eps on liftings containing 0 and 1: 475 cases, violations 0
+C5 glut lower value max(0, T+F-1-eps) on signed lifting: 3000 cases, violations 0
+C6 signed IDM: 2903 multinomial cases, violations 0 | binary 16199 violations 0 | over-values 5440 without an under-value 0
+   example {'k': 0, 'mode': 'anti', 'r': 15, 's': 8, 'S': 25, 'T': 0.6, 'I': 0.08, 'F': 0.32, 'interval': [0.6, 0.68], 'contains_probability': True, 'least_budget': 0.0, 'eps_star': 0.0}
+   example {'k': 0, 'mode': 'remove', 'r': 15, 's': 8, 'S': 25, 'T': 0.6, 'I': 0.08, 'F': 0.32, 'interval': [0.6, 0.68], 'contains_probability': True, 'least_budget': 0.0, 'eps_star': 0.0}
+   example {'k': 1, 'mode': 'anti', 'r': 5, 's': 8, 'S': 15, 'T': 0.3333, 'I': 0.1333, 'F': 0.5333, 'interval': [0.3333, 0.4667], 'contains_probability': True, 'least_budget': 0.0, 'eps_star': 0.0}
+   example {'k': 1, 'mode': 'remove', 'r': 10, 's': 8, 'S': 20, 'T': 0.5, 'I': 0.1, 'F': 0.4, 'interval': [0.5, 0.6], 'contains_probability': True, 'least_budget': 0.0, 'eps_star': 0.0}
+   example {'k': 2, 'mode': 'anti', 'r': -5, 's': 8, 'S': 5, 'T': -1.0, 'I': 0.4, 'F': 1.6, 'interval': [-1.0, -0.6], 'contains_probability': False, 'least_budget': 0.6, 'eps_star': 1.0}
+   example {'k': 2, 'mode': 'remove', 'r': 5, 's': 8, 'S': 15, 'T': 0.3333, 'I': 0.1333, 'F': 0.5333, 'interval': [0.3333, 0.4667], 'contains_probability': True, 'least_budget': 0.0, 'eps_star': 0.0}
+   example {'k': 3, 'mode': 'anti', 'r': -15, 's': 8, 'S': -5, 'defined': False}
+   example {'k': 3, 'mode': 'remove', 'r': 0, 's': 8, 'S': 10, 'T': 0.0, 'I': 0.2, 'F': 0.8, 'interval': [0.0, 0.2], 'contains_probability': True, 'least_budget': 0.0, 'eps_star': 0.0}
+C7a product budget identity: 2000 pairs, max error 7.105427357601002e-15
+C7b independence formula: 300 pairs; sampled values below formula 0 ; max attainment gap 4.440892098500626e-16 ; algebraic T differs in 72 ; algebraic I differs in 94
+   counterexample T_mixed_sign {'x1': [-0.2, 0.3, 0.9], 'e1': 0.2, 'x2': [0.5, 0.2, 0.3], 'e2': 0.0, 'natural_extension': [-0.2, 0.44, 0.93], 'algebraic_N_norm': [-0.1, 0.44, 0.93]}
+   counterexample T_both_negative {'x1': [-0.2, 0.3, 0.9], 'e1': 0.2, 'x2': [-0.2, 0.3, 0.9], 'e2': 0.2, 'natural_extension': [-0.24, 0.51, 0.96], 'algebraic_N_norm': [0.04, 0.51, 0.99]}
+   counterexample I_over {'x1': [0.1, 1.2, 0.0], 'e1': 0.2, 'x2': [0.3, 0.5, 0.2], 'e2': 0.0, 'natural_extension': [0.03, 1.0, 0.2], 'algebraic_N_norm': [0.03, 1.1, 0.2]}
+   counterexample I_standard_but_budget {'x1': [1.2, 1.0, 0.0], 'e1': 0.2, 'x2': [1.1, 1.0, 0.0], 'e2': 0.1, 'natural_extension': [1.32, 0.98, 0.0], 'algebraic_N_norm': [1.32, 1.0, 0.0]}
+C7c comonotone (product_budget): 150 pairs, mismatches 0, first None
+C7c comonotone (max_budget): 150 pairs, mismatches 1, first {'x1': [np.float64(-0.3488), np.float64(0.8626), np.float64(0.7448)], 'x2': [np.float64(1.0738), np.float64(1.1167), np.float64(-0.1752)], 'e1': np.float64(0.3541), 'e2': np.float64(0.2606), 'eJ': np.float64(0.3541), 'lp': [-0.2804, 1.1167, 0.7448], 'minmaxmax': [np.float64(-0.3488), np.float64(1.1167), np.float64(0.7448)]}
+C7d no dependence assumption (eJ=max(e1,e2)): 150 pairs; bound violations 0 ; Frechet N-norm differs in 150
+C7e charge Frechet bound not sharp: u=-0.2, v=1.2, eps=0.2: Q(A&B) in [0.0, 0.0] bound -0.2

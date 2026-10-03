@@ -1,0 +1,54 @@
+{
+ "averitec": {
+  "n": 2765,
+  "auroc_S": 0.6713775316803237,
+  "mean_S_conflict": 4.117117117117117,
+  "mean_S_nonconflict": 3.209201730239874,
+  "C*_K": {
+   "auroc_overall_mean5": 0.5880714769035651,
+   "auroc_within_S_strata_mean5": 0.5663377396700018,
+   "conflict_items_in_usable_strata": 217
+  },
+  "width_src": {
+   "auroc_overall_mean5": 0.6516662946863497,
+   "auroc_within_S_strata_mean5": 0.5842490384744259,
+   "conflict_items_in_usable_strata": 217
+  },
+  "width_hull": {
+   "auroc_overall_mean5": 0.41488062974496315,
+   "auroc_within_S_strata_mean5": 0.5225808649252179,
+   "conflict_items_in_usable_strata": 217
+  },
+  "entropy": {
+   "auroc_overall_mean5": 0.5420964810662019,
+   "auroc_within_S_strata_mean5": 0.5215908328013977,
+   "conflict_items_in_usable_strata": 217
+  }
+ },
+ "climate": {
+  "n": 1535,
+  "auroc_S": 0.5,
+  "mean_S_conflict": 5.0,
+  "mean_S_nonconflict": 5.0,
+  "C*_K": {
+   "auroc_overall_mean5": 0.5290552676866942,
+   "auroc_within_S_strata_mean5": 0.5290552676866942,
+   "conflict_items_in_usable_strata": 154
+  },
+  "width_src": {
+   "auroc_overall_mean5": 0.5346878320810255,
+   "auroc_within_S_strata_mean5": 0.5346878320810255,
+   "conflict_items_in_usable_strata": 154
+  },
+  "width_hull": {
+   "auroc_overall_mean5": 0.47869227079943955,
+   "auroc_within_S_strata_mean5": 0.47869227079943955,
+   "conflict_items_in_usable_strata": 154
+  },
+  "entropy": {
+   "auroc_overall_mean5": 0.6436470842698214,
+   "auroc_within_S_strata_mean5": 0.6436470842698214,
+   "conflict_items_in_usable_strata": 154
+  }
+ }
+}

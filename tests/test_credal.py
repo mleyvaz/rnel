@@ -19,6 +19,7 @@ def rand_members(rng, M=7, n=11, K=4):
 
 
 # ----------------------------------------------------------------------------- representation only
+@pytest.mark.theorem("Theorem 1")
 def test_neutrosophic_identities():
     rng = np.random.default_rng(0)
     for method in ("hull", "trimmed", "quantile"):
@@ -29,6 +30,7 @@ def test_neutrosophic_identities():
         assert (T >= -TOL).all() and (I >= -TOL).all() and (F >= -TOL).all()
 
 
+@pytest.mark.theorem("Theorem 1")
 def test_bijection_with_normalised_pair():
     rng = np.random.default_rng(1)
     # (l, u) -> (T, I, F) -> (l, u)
@@ -120,6 +122,7 @@ def test_binary_c_star_matches_conflict_state_and_multiclass_reduces():
         assert abs(cr.c_star_multiclass(E)[0] - ref) < 1e-9  # K = 2: sup-norm C* = binary C*
 
 
+@pytest.mark.theorem("Section 12.4 (C* order-free)")
 def test_c_star_between_views_is_order_free():
     rng = np.random.default_rng(6)
     E = rng.exponential(2, size=(4, 50, 3))

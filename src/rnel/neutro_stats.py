@@ -38,7 +38,7 @@ from .tuple import Reports
 
 __all__ = [
     "NNumber", "NeutroEstimate", "estimate", "estimate_sources", "decompose", "interval_sum",
-    "credal_interval", "TYPES",
+    "credal_interval", "TYPES", "AffineForm", "to_affine", "from_affine", "eps_from_I", "I_from_eps",
 ]
 
 TYPES = ("C", "U", "N")          # data-indeterminacy symbols: contradictory, undetermined, ill-posed
@@ -146,6 +146,79 @@ class NNumber:
         if isinstance(other, NNumber):
             raise TypeError("division by an NNumber is not implemented; divide by a scalar")
         return self * (1.0 / float(other))
+
+
+# ============================================================================ affine arithmetic bridge
+def eps_from_I(I: float) -> float:
+    """Noise symbol of affine arithmetic for an indeterminacy value: eps = 2 I - 1 (I in [0,1] <-> eps in [-1,1])."""
+    return 2.0 * I - 1.0
+
+
+def I_from_eps(eps: float) -> float:
+    """Inverse bijection I = (1 + eps) / 2."""
+    return (1.0 + eps) / 2.0
+
+
+class AffineForm:
+    """Reference affine form x0 + sum_k x_k eps_k, eps_k in [-1, 1] (Stolfi and de Figueiredo 2003).
+
+    Only what is needed for the bijection with :class:`NNumber`: addition, scalar multiplication and the standard
+    product x0 y0 + sum_k (x0 y_k + y0 x_k) eps_k + rad(x) rad(y) eps_new."""
+
+    __slots__ = ("x0", "coeffs")
+
+    def __init__(self, x0: float, coeffs: Optional[Mapping[Hashable, float]] = None):
+        self.x0 = float(x0)
+        self.coeffs = {k: float(v) for k, v in (coeffs or {}).items() if v != 0.0}
+
+    @property
+    def radius(self) -> float:
+        return sum(abs(v) for v in self.coeffs.values())
+
+    def range(self) -> tuple[float, float]:
+        return self.x0 - self.radius, self.x0 + self.radius
+
+    def __add__(self, other):
+        o = other if isinstance(other, AffineForm) else AffineForm(float(other))
+        c = dict(self.coeffs)
+        for k, v in o.coeffs.items():
+            c[k] = c.get(k, 0.0) + v
+        return AffineForm(self.x0 + o.x0, c)
+
+    __radd__ = __add__
+
+    def __neg__(self):
+        return AffineForm(-self.x0, {k: -v for k, v in self.coeffs.items()})
+
+    def __sub__(self, other):
+        return self + (-(other if isinstance(other, AffineForm) else AffineForm(float(other))))
+
+    def __mul__(self, other):
+        if not isinstance(other, AffineForm):
+            c = float(other)
+            return AffineForm(self.x0 * c, {k: v * c for k, v in self.coeffs.items()})
+        c: dict = {}
+        for k, v in self.coeffs.items():
+            c[k] = c.get(k, 0.0) + other.x0 * v
+        for k, v in other.coeffs.items():
+            c[k] = c.get(k, 0.0) + self.x0 * v
+        r = self.radius * other.radius
+        if r > 0:
+            c[_fresh()] = r
+        return AffineForm(self.x0 * other.x0, c)
+
+    __rmul__ = __mul__
+
+
+def to_affine(x: NNumber) -> AffineForm:
+    """a + sum b_k I_k  ->  (a + sum b_k / 2) + sum (b_k / 2) eps_k, under I_k = (1 + eps_k)/2. Same range; the
+    labels are kept as the names of the noise symbols."""
+    return AffineForm(x.a + 0.5 * sum(x.terms.values()), {k: 0.5 * v for k, v in x.terms.items()})
+
+
+def from_affine(f: AffineForm) -> NNumber:
+    """Inverse of :func:`to_affine`: x0 + sum c_k eps_k  ->  (x0 - sum c_k) + sum (2 c_k) I_k."""
+    return NNumber(f.x0 - sum(f.coeffs.values()), {k: 2.0 * v for k, v in f.coeffs.items()})
 
 
 # ============================================================================ estimates

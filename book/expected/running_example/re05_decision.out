@@ -1,0 +1,17 @@
+Step 5a: decision between 'graduates' and 'does not graduate'
+  no assumption      P(graduates) in [0.000, 0.500]  not interval-dominated: ['graduates', 'not']  E-admissible: ['graduates', 'not']
+  independence       P(graduates) in [0.096, 0.216]  not interval-dominated: ['not']  E-admissible: ['not']
+  comon. in subject  P(graduates) in [0.200, 0.300]  not interval-dominated: ['not']  E-admissible: ['not']
+  comonotone         P(graduates) in [0.400, 0.500]  not interval-dominated: ['graduates', 'not']  E-admissible: ['graduates', 'not']
+
+Step 5b: what-if, one course raised by 0.1 (lower, upper probability of graduating)
+  raised           no assumption          independence     comon. in subject            comonotone
+  none            [0.000, 0.500]        [0.096, 0.216]        [0.200, 0.300]        [0.400, 0.500]
+  DE              [0.000, 0.500]        [0.115, 0.243]        [0.240, 0.300]        [0.400, 0.500]
+  SA              [0.000, 0.500]        [0.112, 0.252]        [0.200, 0.350]        [0.400, 0.500]
+  FM              [0.000, 0.500]        [0.108, 0.240]        [0.200, 0.300]        [0.400, 0.500]
+  SM              [0.000, 0.600]        [0.120, 0.259]        [0.250, 0.360]        [0.500, 0.600]
+  no assumption     : best lower bound from SM, best upper bound from SM
+  independence      : best lower bound from SM, best upper bound from SM
+  comon. in subject : best lower bound from SM, best upper bound from SM
+  comonotone        : best lower bound from SM, best upper bound from SM

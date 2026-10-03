@@ -1,5 +1,7 @@
 # rnel: Refined Neutrosophic Evidential Logic
 
+### A toolkit for neutrosophic evidence
+
 [![Documentation](https://img.shields.io/badge/docs-mleyvaz.github.io%2Frnel-blue)](https://mleyvaz.github.io/rnel/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23040628.svg)](https://doi.org/10.5281/zenodo.23040628)
 
@@ -102,9 +104,17 @@ and a glut lifting* (manuscript, 2026); the tests check the closed forms of Theo
 | `rnel.datasets` | Loaders for AVeriTeC, CLIMATE-FEVER and ChaosNLI with their mapping to RNEL types |
 | `rnel.off` | Experimental signed-evidence ledger, source-level retraction and over/under/off values |
 | `rnel.neutro_credal` | Experimental: Walley's tools (sure loss, coherence, natural extension, IDM, decisions by sets, glut lifting) on neutrosophic triples |
+| `rnel.neutro_stats` | Experimental: refined neutrosophic estimates with labelled indeterminacy symbols and an affine-arithmetic bridge |
+| `rnel.conflict` | Experimental: order-free between-source conflict, within-source conflict and provenance-aware fusion |
+| `rnel.copula` | Experimental: copulas, copula N-norms, Fréchet brackets and dependence diagnostics |
+| `rnel.plithogeny` | Experimental: switched/plithogenic N-norms, liftings and plithogenic IDM |
+| `rnel.scores` | Base-rate score functions, Hurwicz readings and dominance under imprecise base rates |
+| `rnel.dsmt` | Experimental: DSmT rules on small free, Shafer and hybrid frames, plus the RNEL dictionary |
+| `rnel.mvc`, `rnel.active` | Experimental: multi-view clustering and reliability-weighted active learning |
 
 ## Verified
-`pytest` runs the results of the paper as tests (450 tests):
+`pytest` runs the results of the papers and book as automated tests. Numbered results carry
+`@pytest.mark.theorem(...)`; the generated theorem-to-test map records the current exact counts.
 - the worked example of Proposition 8.3 and Definition 8.4;
 - Theorem 8.2;
 - Theorem 5.2 on random tuples: involution, De Morgan, multiplicative mass, and projection onto SL
@@ -113,7 +123,9 @@ and a glut lifting* (manuscript, 2026); the tests check the closed forms of Theo
 - De Morgan and SL projection for the RNEL operators;
 - the neural head and the per-source network.
 
-Version 0.2.0 adds base-rate-calibrated conjunction and disjunction and an experimental signed-evidence ledger. The release is archived at https://doi.org/10.5281/zenodo.23040628.
+Version 0.3.0 consolidates the credal, conflict, refined-statistics, multi-view learning, DSmT, copula,
+plithogenic and score modules used by *Neutrosophic Evidence*. Version 0.2.0 remains archived at
+https://doi.org/10.5281/zenodo.23040628; Maikel will create the 0.3.0 Zenodo version manually.
 
 ## Evidence on real data
 The preregistered evaluation of the neural head on AVeriTeC, CLIMATE-FEVER and ChaosNLI is at

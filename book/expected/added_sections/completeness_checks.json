@@ -1,0 +1,109 @@
+{
+ "check1_translation": {
+  "formulas": 4000,
+  "max_error": 4.440892098500626e-16
+ },
+ "check2_validities": {
+  "violations": {
+   "I_nonneg": 0,
+   "I_neg_invariant": 0,
+   "normalised": 0,
+   "T_monotone": 0,
+   "I_union_bound": 0,
+   "I_true_zero": 0
+  },
+  "worst_union_slack": 2.220446049250313e-16,
+  "subadditivity_counterexample": {
+   "I_p": 0.0,
+   "I_q": 0.0,
+   "I_por": 0.5,
+   "I_pand": 0.5
+  }
+ },
+ "check3_weak_vs_coherent": {
+  "C1_coherent_feasible": false,
+  "C1_weak_feasible": true,
+  "C2_weak_feasible": true,
+  "C2_coherent_feasible": false
+ },
+ "check5_faithful_regions": {
+  "points": 3000,
+  "mismatches": {
+   "S_min": 0,
+   "S_Bel": 0,
+   "S_dis": 0
+  }
+ },
+ "check4_farkas_covers": {
+  "cases": 600,
+  "realisable": 346,
+  "not_realisable": 254,
+  "certificates_valid": 254,
+  "certificates_bad": 0,
+  "envelope_err": 4.440892098500626e-16,
+  "sound_violations": 0,
+  "sound_instances": 12000
+ },
+ "check6_lifted_validities": {
+  "violations": {
+   "I_same_atoms": 0,
+   "I_conj_ge_max": 0,
+   "T_conj_frechet": 0,
+   "F_conj_ge_max": 0,
+   "Belnap_region": 0
+  },
+  "frechet_tightness_max_error": 1.1102230246251565e-16
+ },
+ "check7_consequence": {
+  "pairs": 14400,
+  "mismatches": {
+   "S_min_vs_LP": 0,
+   "S_Bel_vs_FDE": 0,
+   "S_dis_vs_K3": 0
+  },
+  "examples": {
+   "S_min": {
+    "explosion": false,
+    "excluded_middle": true
+   },
+   "S_Bel": {
+    "explosion": false,
+    "excluded_middle": false
+   },
+   "S_dis": {
+    "explosion": true,
+    "excluded_middle": false
+   }
+  }
+ },
+ "check8_reduction": {
+  "cnfs": 150,
+  "mismatches": {
+   "S_min": 0,
+   "S_Bel": 0,
+   "S_dis": 0
+  }
+ },
+ "check10_I_not_definable": {
+  "TF_disagreements": 0,
+  "I_values": [
+   1,
+   0
+  ]
+ },
+ "check9_I_sensitive_consequence": {
+  "pairs": 14400,
+  "valid": 5169,
+  "mismatches": 0
+ },
+ "check11_signed": {
+  "S_min_exact_error": 6.661338147750939e-16,
+  "cases": 400,
+  "realisable": 255,
+  "not_realisable": 145,
+  "certificates_valid": 145,
+  "certificates_bad": 0,
+  "envelope_err": 8.881784197001252e-16,
+  "off_values_realised": 233
+ }
+}

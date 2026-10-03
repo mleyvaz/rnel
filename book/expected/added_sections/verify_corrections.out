@@ -1,0 +1,12 @@
+L1_pool_equal {'minimal_lifting_atoms': 10, 'minimal': 0.666667, 'product': 0.623333}
+L1_pool_one_minus_c {'minimal_lifting_atoms': 10, 'minimal': 0.631667, 'product': 0.61}
+L2_graduation_I_mean {'minimal_lifting_atoms': 13, 'minimal': 0.75, 'product': 0.15}
+L3_three_atoms_faithful {'points': 726, 'largest_error': 1.1102230246251565e-16, 'atoms': 3, 'm_plus_1': 4}
+L3_outside_region_example {'point': [1.0, 0.7, 0.6], 'credal_set_empty': True}
+L4_sign {'0.8': -0.24, '0.2': 0.24}
+L5_moebius {'[1]': np.float64(0.2), '[2]': np.float64(0.3), '[3]': np.float64(0.1), '[1, 2]': np.float64(0.0), '[1, 3]': np.float64(0.2), '[2, 3]': np.float64(0.2), '[1, 2, 3]': np.float64(0.0)}
+L6_theorem7c {'positive': {'pair': ((0.0, 0.9, 0.1), (0.0, 0.1, 0.9)), 'diff': 0.8}, 'negative': {'pair': ((0.5, 0.0, 0.5), (0.5, 0.0, 0.5)), 'diff': -0.5}}
+L7_C3 {'definition': 'lower envelope of P1 = (1/2, 1/2, 0, 0) and P2 = (0, 0, 1/2, 1/2) on four atoms', 'two_monotone': False, 'violation': [[1, 3], [1, 4]]}
+L7_C4 {'definition': 'L({i}) = 0 and L({i,j}) = 1/2 on three atoms', 'two_monotone': True, 'moebius_of_Omega': -0.5, 'credal_set': 'P(k) <= 1/2 for every k'}
+L8_theorem11_run {'largest_formula_error': 6.175615574477433e-16, 'largest_falsity_difference_radially_symmetric': 2.733924198139448e-15, 'attained_by': 'Frank(5)'}
+ALL CHECKS PASSED

@@ -1,0 +1,868 @@
+{
+  "n_rows": 22,
+  "n_used": 21,
+  "excluded": [
+    "P11"
+  ],
+  "type_counts_final": {
+    "t": 4.0,
+    "f": 8.0,
+    "c": 1.0,
+    "v": 2.0,
+    "A": 6.0
+  },
+  "final_main": {
+    "variant": "main",
+    "year": 2026,
+    "n_analyses": 21,
+    "n_t": 4.0,
+    "n_f": 8.0,
+    "n_c": 1.0,
+    "n_v": 2.0,
+    "n_A": 6.0,
+    "lower": 0.1739,
+    "upper": 0.6522,
+    "width": 0.4783,
+    "w_I_C": 0.0435,
+    "w_I_U": 0.087,
+    "w_I_A": 0.2609,
+    "w_I_G": 0.087,
+    "dominant": "I_A",
+    "recommended_action": "identification designs (sibling / negative control / active comparator)"
+  },
+  "dominant_by_year_main": {
+    "2013": "I_G",
+    "2016": "I_G = I_A (tie)",
+    "2019": "I_G = I_A = I_U (tie)",
+    "2020": "I_G = I_A = I_U (tie)",
+    "2021": "I_G = I_A = I_U (tie)",
+    "2024": "I_A",
+    "2026": "I_A"
+  },
+  "dominant_by_year_all_variants": {
+    "main": {
+      "2013": "I_G",
+      "2016": "I_G = I_A (tie)",
+      "2019": "I_G = I_A = I_U (tie)",
+      "2020": "I_G = I_A = I_U (tie)",
+      "2021": "I_G = I_A = I_U (tie)",
+      "2024": "I_A",
+      "2026": "I_A"
+    },
+    "S1_weak_as_undetermined": {
+      "2013": "I_G",
+      "2016": "I_U",
+      "2019": "I_U",
+      "2020": "I_U",
+      "2021": "I_U",
+      "2024": "I_U",
+      "2026": "I_U"
+    },
+    "S2_source_once": {
+      "2013": "I_G",
+      "2016": "I_G = I_A (tie)",
+      "2019": "I_G = I_A (tie)",
+      "2020": "I_G = I_A (tie)",
+      "2021": "I_G = I_A (tie)",
+      "2024": "I_A",
+      "2026": "I_A"
+    },
+    "S3_W1": {
+      "2013": "I_G = I_A (tie)",
+      "2016": "I_A",
+      "2019": "I_A = I_U (tie)",
+      "2020": "I_A = I_U (tie)",
+      "2021": "I_A = I_U (tie)",
+      "2024": "I_A",
+      "2026": "I_A"
+    },
+    "S3_W4": {
+      "2013": "I_G",
+      "2016": "I_G",
+      "2019": "I_G",
+      "2020": "I_G",
+      "2021": "I_G",
+      "2024": "I_G",
+      "2026": "I_A"
+    }
+  },
+  "a3": [
+    {
+      "variant": "main",
+      "from_year": 2013,
+      "added_class": "population-model",
+      "n_added": 11,
+      "added_types": "AAAAAttttvv",
+      "width_before": 1.0,
+      "width_after": 0.7143,
+      "reduction": 0.2857,
+      "reduction_per_analysis": 0.026
+    },
+    {
+      "variant": "main",
+      "from_year": 2013,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 1.0,
+      "width_after": 0.3333,
+      "reduction": 0.6667,
+      "reduction_per_analysis": 0.0741
+    },
+    {
+      "variant": "main",
+      "from_year": 2016,
+      "added_class": "population-model",
+      "n_added": 7,
+      "added_types": "AAAAttv",
+      "width_before": 0.7143,
+      "width_after": 0.7143,
+      "reduction": 0.0,
+      "reduction_per_analysis": 0.0
+    },
+    {
+      "variant": "main",
+      "from_year": 2016,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.7143,
+      "width_after": 0.375,
+      "reduction": 0.3393,
+      "reduction_per_analysis": 0.0377
+    },
+    {
+      "variant": "main",
+      "from_year": 2019,
+      "added_class": "population-model",
+      "n_added": 6,
+      "added_types": "AAAAtt",
+      "width_before": 0.75,
+      "width_after": 0.7143,
+      "reduction": 0.0357,
+      "reduction_per_analysis": 0.006
+    },
+    {
+      "variant": "main",
+      "from_year": 2019,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.75,
+      "width_after": 0.4118,
+      "reduction": 0.3382,
+      "reduction_per_analysis": 0.0376
+    },
+    {
+      "variant": "main",
+      "from_year": 2020,
+      "added_class": "population-model",
+      "n_added": 5,
+      "added_types": "AAAAt",
+      "width_before": 0.6667,
+      "width_after": 0.7143,
+      "reduction": -0.0476,
+      "reduction_per_analysis": -0.0095
+    },
+    {
+      "variant": "main",
+      "from_year": 2020,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.6667,
+      "width_after": 0.3889,
+      "reduction": 0.2778,
+      "reduction_per_analysis": 0.0309
+    },
+    {
+      "variant": "main",
+      "from_year": 2021,
+      "added_class": "population-model",
+      "n_added": 4,
+      "added_types": "AAAA",
+      "width_before": 0.6,
+      "width_after": 0.7143,
+      "reduction": -0.1143,
+      "reduction_per_analysis": -0.0286
+    },
+    {
+      "variant": "main",
+      "from_year": 2021,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.6,
+      "width_after": 0.3684,
+      "reduction": 0.2316,
+      "reduction_per_analysis": 0.0257
+    },
+    {
+      "variant": "main",
+      "from_year": 2024,
+      "added_class": "population-model",
+      "n_added": 3,
+      "added_types": "AAA",
+      "width_before": 0.5385,
+      "width_after": 0.625,
+      "reduction": -0.0865,
+      "reduction_per_analysis": -0.0288
+    },
+    {
+      "variant": "main",
+      "from_year": 2024,
+      "added_class": "identification",
+      "n_added": 7,
+      "added_types": "cffffff",
+      "width_before": 0.5385,
+      "width_after": 0.4,
+      "reduction": 0.1385,
+      "reduction_per_analysis": 0.0198
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2013,
+      "added_class": "population-model",
+      "n_added": 11,
+      "added_types": "AAAAAvvvvvv",
+      "width_before": 1.0,
+      "width_after": 1.0,
+      "reduction": 0.0,
+      "reduction_per_analysis": 0.0
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2013,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffvvvv",
+      "width_before": 1.0,
+      "width_after": 0.6667,
+      "reduction": 0.3333,
+      "reduction_per_analysis": 0.037
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2016,
+      "added_class": "population-model",
+      "n_added": 7,
+      "added_types": "AAAAvvv",
+      "width_before": 1.0,
+      "width_after": 1.0,
+      "reduction": 0.0,
+      "reduction_per_analysis": 0.0
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2016,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffvvvv",
+      "width_before": 1.0,
+      "width_after": 0.75,
+      "reduction": 0.25,
+      "reduction_per_analysis": 0.0278
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2019,
+      "added_class": "population-model",
+      "n_added": 6,
+      "added_types": "AAAAvv",
+      "width_before": 1.0,
+      "width_after": 1.0,
+      "reduction": 0.0,
+      "reduction_per_analysis": 0.0
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2019,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffvvvv",
+      "width_before": 1.0,
+      "width_after": 0.7647,
+      "reduction": 0.2353,
+      "reduction_per_analysis": 0.0261
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2020,
+      "added_class": "population-model",
+      "n_added": 5,
+      "added_types": "AAAAv",
+      "width_before": 1.0,
+      "width_after": 1.0,
+      "reduction": 0.0,
+      "reduction_per_analysis": 0.0
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2020,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffvvvv",
+      "width_before": 1.0,
+      "width_after": 0.7778,
+      "reduction": 0.2222,
+      "reduction_per_analysis": 0.0247
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2021,
+      "added_class": "population-model",
+      "n_added": 4,
+      "added_types": "AAAA",
+      "width_before": 1.0,
+      "width_after": 1.0,
+      "reduction": 0.0,
+      "reduction_per_analysis": 0.0
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2021,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffvvvv",
+      "width_before": 1.0,
+      "width_after": 0.7895,
+      "reduction": 0.2105,
+      "reduction_per_analysis": 0.0234
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2024,
+      "added_class": "population-model",
+      "n_added": 3,
+      "added_types": "AAA",
+      "width_before": 0.8462,
+      "width_after": 0.875,
+      "reduction": -0.0288,
+      "reduction_per_analysis": -0.0096
+    },
+    {
+      "variant": "S1_weak_as_undetermined",
+      "from_year": 2024,
+      "added_class": "identification",
+      "n_added": 7,
+      "added_types": "cffvvvv",
+      "width_before": 0.8462,
+      "width_after": 0.8,
+      "reduction": 0.0462,
+      "reduction_per_analysis": 0.0066
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2013,
+      "added_class": "population-model",
+      "n_added": 11,
+      "added_types": "AAAAAttttvv",
+      "width_before": 1.0,
+      "width_after": 0.7778,
+      "reduction": 0.2222,
+      "reduction_per_analysis": 0.0202
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2013,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 1.0,
+      "width_after": 0.4375,
+      "reduction": 0.5625,
+      "reduction_per_analysis": 0.0625
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2016,
+      "added_class": "population-model",
+      "n_added": 7,
+      "added_types": "AAAAttv",
+      "width_before": 0.8667,
+      "width_after": 0.7778,
+      "reduction": 0.0889,
+      "reduction_per_analysis": 0.0127
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2016,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.8667,
+      "width_after": 0.4833,
+      "reduction": 0.3833,
+      "reduction_per_analysis": 0.0426
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2019,
+      "added_class": "population-model",
+      "n_added": 6,
+      "added_types": "AAAAtt",
+      "width_before": 0.8889,
+      "width_after": 0.7778,
+      "reduction": 0.1111,
+      "reduction_per_analysis": 0.0185
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2019,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.8889,
+      "width_after": 0.5303,
+      "reduction": 0.3586,
+      "reduction_per_analysis": 0.0398
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2020,
+      "added_class": "population-model",
+      "n_added": 5,
+      "added_types": "AAAAt",
+      "width_before": 0.7619,
+      "width_after": 0.7778,
+      "reduction": -0.0159,
+      "reduction_per_analysis": -0.0032
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2020,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.7619,
+      "width_after": 0.4861,
+      "reduction": 0.2758,
+      "reduction_per_analysis": 0.0306
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2021,
+      "added_class": "population-model",
+      "n_added": 4,
+      "added_types": "AAAA",
+      "width_before": 0.6667,
+      "width_after": 0.7778,
+      "reduction": -0.1111,
+      "reduction_per_analysis": -0.0278
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2021,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.6667,
+      "width_after": 0.4487,
+      "reduction": 0.2179,
+      "reduction_per_analysis": 0.0242
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2024,
+      "added_class": "population-model",
+      "n_added": 3,
+      "added_types": "AAA",
+      "width_before": 0.6296,
+      "width_after": 0.7222,
+      "reduction": -0.0926,
+      "reduction_per_analysis": -0.0309
+    },
+    {
+      "variant": "S2_source_once",
+      "from_year": 2024,
+      "added_class": "identification",
+      "n_added": 7,
+      "added_types": "cffffff",
+      "width_before": 0.6296,
+      "width_after": 0.4744,
+      "reduction": 0.1553,
+      "reduction_per_analysis": 0.0222
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2013,
+      "added_class": "population-model",
+      "n_added": 11,
+      "added_types": "AAAAAttttvv",
+      "width_before": 1.0,
+      "width_after": 0.6923,
+      "reduction": 0.3077,
+      "reduction_per_analysis": 0.028
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2013,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 1.0,
+      "width_after": 0.2727,
+      "reduction": 0.7273,
+      "reduction_per_analysis": 0.0808
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2016,
+      "added_class": "population-model",
+      "n_added": 7,
+      "added_types": "AAAAttv",
+      "width_before": 0.6667,
+      "width_after": 0.6923,
+      "reduction": -0.0256,
+      "reduction_per_analysis": -0.0037
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2016,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.6667,
+      "width_after": 0.3333,
+      "reduction": 0.3333,
+      "reduction_per_analysis": 0.037
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2019,
+      "added_class": "population-model",
+      "n_added": 6,
+      "added_types": "AAAAtt",
+      "width_before": 0.7143,
+      "width_after": 0.6923,
+      "reduction": 0.022,
+      "reduction_per_analysis": 0.0037
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2019,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.7143,
+      "width_after": 0.375,
+      "reduction": 0.3393,
+      "reduction_per_analysis": 0.0377
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2020,
+      "added_class": "population-model",
+      "n_added": 5,
+      "added_types": "AAAAt",
+      "width_before": 0.625,
+      "width_after": 0.6923,
+      "reduction": -0.0673,
+      "reduction_per_analysis": -0.0135
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2020,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.625,
+      "width_after": 0.3529,
+      "reduction": 0.2721,
+      "reduction_per_analysis": 0.0302
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2021,
+      "added_class": "population-model",
+      "n_added": 4,
+      "added_types": "AAAA",
+      "width_before": 0.5556,
+      "width_after": 0.6923,
+      "reduction": -0.1368,
+      "reduction_per_analysis": -0.0342
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2021,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.5556,
+      "width_after": 0.3333,
+      "reduction": 0.2222,
+      "reduction_per_analysis": 0.0247
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2024,
+      "added_class": "population-model",
+      "n_added": 3,
+      "added_types": "AAA",
+      "width_before": 0.5,
+      "width_after": 0.6,
+      "reduction": -0.1,
+      "reduction_per_analysis": -0.0333
+    },
+    {
+      "variant": "S3_W1",
+      "from_year": 2024,
+      "added_class": "identification",
+      "n_added": 7,
+      "added_types": "cffffff",
+      "width_before": 0.5,
+      "width_after": 0.3684,
+      "reduction": 0.1316,
+      "reduction_per_analysis": 0.0188
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2013,
+      "added_class": "population-model",
+      "n_added": 11,
+      "added_types": "AAAAAttttvv",
+      "width_before": 1.0,
+      "width_after": 0.75,
+      "reduction": 0.25,
+      "reduction_per_analysis": 0.0227
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2013,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 1.0,
+      "width_after": 0.4286,
+      "reduction": 0.5714,
+      "reduction_per_analysis": 0.0635
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2016,
+      "added_class": "population-model",
+      "n_added": 7,
+      "added_types": "AAAAttv",
+      "width_before": 0.7778,
+      "width_after": 0.75,
+      "reduction": 0.0278,
+      "reduction_per_analysis": 0.004
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2016,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.7778,
+      "width_after": 0.4444,
+      "reduction": 0.3333,
+      "reduction_per_analysis": 0.037
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2019,
+      "added_class": "population-model",
+      "n_added": 6,
+      "added_types": "AAAAtt",
+      "width_before": 0.8,
+      "width_after": 0.75,
+      "reduction": 0.05,
+      "reduction_per_analysis": 0.0083
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2019,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.8,
+      "width_after": 0.4737,
+      "reduction": 0.3263,
+      "reduction_per_analysis": 0.0363
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2020,
+      "added_class": "population-model",
+      "n_added": 5,
+      "added_types": "AAAAt",
+      "width_before": 0.7273,
+      "width_after": 0.75,
+      "reduction": -0.0227,
+      "reduction_per_analysis": -0.0045
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2020,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.7273,
+      "width_after": 0.45,
+      "reduction": 0.2773,
+      "reduction_per_analysis": 0.0308
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2021,
+      "added_class": "population-model",
+      "n_added": 4,
+      "added_types": "AAAA",
+      "width_before": 0.6667,
+      "width_after": 0.75,
+      "reduction": -0.0833,
+      "reduction_per_analysis": -0.0208
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2021,
+      "added_class": "identification",
+      "n_added": 9,
+      "added_types": "cffffffff",
+      "width_before": 0.6667,
+      "width_after": 0.4286,
+      "reduction": 0.2381,
+      "reduction_per_analysis": 0.0265
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2024,
+      "added_class": "population-model",
+      "n_added": 3,
+      "added_types": "AAA",
+      "width_before": 0.6,
+      "width_after": 0.6667,
+      "reduction": -0.0667,
+      "reduction_per_analysis": -0.0222
+    },
+    {
+      "variant": "S3_W4",
+      "from_year": 2024,
+      "added_class": "identification",
+      "n_added": 7,
+      "added_types": "cffffff",
+      "width_before": 0.6,
+      "width_after": 0.4545,
+      "reduction": 0.1455,
+      "reduction_per_analysis": 0.0208
+    }
+  ],
+  "a4": [
+    {
+      "year": 2016,
+      "k": 2,
+      "rows": "P02a P02b",
+      "pooled_ratio": 1.249,
+      "ci_low": 0.884,
+      "ci_high": 1.765,
+      "log_ci_width": 0.6917,
+      "tau2": 0.0523,
+      "I2": 0.835
+    },
+    {
+      "year": 2019,
+      "k": 2,
+      "rows": "P02a P02b",
+      "pooled_ratio": 1.249,
+      "ci_low": 0.884,
+      "ci_high": 1.765,
+      "log_ci_width": 0.6917,
+      "tau2": 0.0523,
+      "I2": 0.835
+    },
+    {
+      "year": 2020,
+      "k": 2,
+      "rows": "P02a P02b",
+      "pooled_ratio": 1.249,
+      "ci_low": 0.884,
+      "ci_high": 1.765,
+      "log_ci_width": 0.6917,
+      "tau2": 0.0523,
+      "I2": 0.835
+    },
+    {
+      "year": 2021,
+      "k": 3,
+      "rows": "P02a P02b P05",
+      "pooled_ratio": 1.209,
+      "ci_low": 1.031,
+      "ci_high": 1.417,
+      "log_ci_width": 0.318,
+      "tau2": 0.0129,
+      "I2": 0.672
+    },
+    {
+      "year": 2024,
+      "k": 4,
+      "rows": "P02a P02b P05 P06a",
+      "pooled_ratio": 1.147,
+      "ci_low": 1.021,
+      "ci_high": 1.289,
+      "log_ci_width": 0.2326,
+      "tau2": 0.0097,
+      "I2": 0.771
+    },
+    {
+      "year": 2026,
+      "k": 6,
+      "rows": "P02a P02b P05 P06a P07a P10a",
+      "pooled_ratio": 1.114,
+      "ci_low": 1.039,
+      "ci_high": 1.195,
+      "log_ci_width": 0.1398,
+      "tau2": 0.004,
+      "I2": 0.638
+    }
+  ],
+  "identification_estimates_not_pooled": [
+    {
+      "row_id": "P06b",
+      "paper": "Ahlqvist2024",
+      "year": 2024,
+      "analysis": "sibling control",
+      "ratio": 0.98,
+      "ci": "0.93-1.04"
+    },
+    {
+      "row_id": "P09a",
+      "paper": "Luo2026",
+      "year": 2026,
+      "analysis": "sibling matched",
+      "ratio": 1.0,
+      "ci": "0.91-1.11"
+    },
+    {
+      "row_id": "P09b",
+      "paper": "Luo2026",
+      "year": 2026,
+      "analysis": "NC exposure",
+      "ratio": 1.12,
+      "ci": "1.08-1.17"
+    },
+    {
+      "row_id": "P10b",
+      "paper": "Gram2026",
+      "year": 2026,
+      "analysis": "indication-type comparator",
+      "ratio": 1.01,
+      "ci": "0.76-1.32"
+    },
+    {
+      "row_id": "P10c",
+      "paper": "Gram2026",
+      "year": 2026,
+      "analysis": "NC exposure",
+      "ratio": 1.06,
+      "ci": "0.88-1.28"
+    }
+  ],
+  "a3_identification_wins": {
+    "main": "6/6",
+    "S1_weak_as_undetermined": "6/6",
+    "S2_source_once": "6/6",
+    "S3_W1": "6/6",
+    "S3_W4": "6/6"
+  }
+}

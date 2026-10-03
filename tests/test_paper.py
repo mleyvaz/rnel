@@ -18,6 +18,7 @@ def rand_tuple(keys, normalized=True, rng=random):
 
 
 # --------------------------------------------------------------- Section 2 / Proposition 8.3 example
+@pytest.mark.theorem("Proposition 16.5")
 def test_prop_8_3_example():
     A, B = Opinion.from_evidence(10, 0), Opinion.from_evidence(0, 10)
     assert (round(A.b, 3), round(A.u, 3)) == (0.833, 0.167)
@@ -28,6 +29,7 @@ def test_prop_8_3_example():
     assert abs(fused.b - coin.b) < TOL and abs(fused.u - coin.u) < TOL
 
 
+@pytest.mark.theorem("Definition 16.2")
 def test_def_8_4_separates_disagreement_from_coin():
     rA, rB = Reports(t=10), Reports(f=10)
     x = fused_contradiction([rA, rB])
@@ -37,6 +39,7 @@ def test_def_8_4_separates_disagreement_from_coin():
 
 
 # --------------------------------------------------------------- Theorem 8.2
+@pytest.mark.theorem("Theorem 16.1", "Proposition 16.2")
 def test_theorem_8_2_sl_special_case():
     r = Reports(t=7, f=3)
     x, o = rnel_tuple(r), sl_opinion(r)
@@ -45,6 +48,7 @@ def test_theorem_8_2_sl_special_case():
     assert abs(rnel_tuple(r + r2).T - sl.cumulative_fusion(sl_opinion(r), sl_opinion(r2)).b) < TOL
 
 
+@pytest.mark.theorem("Definition 16.1")
 def test_def_8_1_normalised():
     x = rnel_tuple(Reports(t=3, f=1, c=2, v=1, n=1, extra=(0.5,)))
     assert abs(x.total - 1) < TOL
@@ -52,6 +56,7 @@ def test_def_8_1_normalised():
 
 # --------------------------------------------------------------- Theorem 5.2: (T, I, N, F)
 @pytest.mark.parametrize("seed", range(200))
+@pytest.mark.theorem("Proposition 16.6")
 def test_theorem_5_2(seed):
     rng = random.Random(seed)
     x, y = rand_tuple("TINF", rng=rng), rand_tuple("TINF", rng=rng)
@@ -73,6 +78,7 @@ def test_theorem_5_2(seed):
 
 # --------------------------------------------------------------- Theorem 6.2: multi-uncertainty, n = 3
 @pytest.mark.parametrize("seed", range(100))
+@pytest.mark.theorem("Proposition 16.6")
 def test_theorem_6_2(seed):
     rng = random.Random(seed)
     keys = ["T", "I", "N", "U1", "U2", "U3", "F"]
@@ -85,6 +91,7 @@ def test_theorem_6_2(seed):
 
 # --------------------------------------------------------------- Section 8.3: RNEL operators
 @pytest.mark.parametrize("seed", range(100))
+@pytest.mark.theorem("Proposition 16.6")
 def test_rnel_operators(seed):
     rng = random.Random(seed)
     keys = ["T", "C", "U", "N", "G", "F"]

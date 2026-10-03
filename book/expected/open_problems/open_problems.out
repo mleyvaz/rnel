@@ -1,0 +1,86 @@
+{
+  "F1_symbolic": {
+    "D(1-u,1-v)+D(u,v)": "0",
+    "face_equals_Chat_minus_C": true,
+    "sigma_Pi_equals_I1F2_plus_I2F1": true
+  },
+  "F1_exact_grid_1_12": {
+    "pairs": 8281,
+    "M": "0",
+    "W": "0",
+    "Pi": "0"
+  },
+  "F1_shuffle": {
+    "boundary_and_margins_1_24": true,
+    "two_increasing_1_24": true,
+    "radially_symmetric_1_24": true,
+    "exchangeable_1_24": true,
+    "S(1/4,1/4)": "1/4",
+    "S(3/4,3/4)": "3/4",
+    "S(1/2,1/2)": "1/4",
+    "sigma_at_(1/2,1/4,1/4)x2": "-1/4",
+    "min_sigma_grid_1_8": "-1/4",
+    "grid_1_8_pairs": 2025
+  },
+  "Proposition3_random": {
+    "identities_tested": 1641,
+    "min_slack": -1.3322676295501878e-15
+  },
+  "Corollary3": {
+    "profile": [
+      "0.4",
+      "0.3",
+      "0.4",
+      "0.3",
+      "0.4",
+      "0.1",
+      "0.1"
+    ],
+    "symmetry": true,
+    "subadditivity_all_disjoint_pairs": true,
+    "bound": true,
+    "star_slack_by_a": {
+      "0": "-1/5",
+      "1": "0",
+      "2": "-1/5",
+      "3": "0"
+    },
+    "LP_attainable": false,
+    "sanity_random_envelopes_attainable": "200/200",
+    "star_on_3000_random_envelopes_min_slack": -4.440892098500626e-16
+  },
+  "F2_observation": {
+    "grid_profiles_satisfying_conditions_and_star": 500,
+    "LP_unattainable": 241
+  },
+  "Proposition4_example": {
+    "profile": [
+      "4/5",
+      "1",
+      "9/10",
+      "1",
+      "19/20",
+      "17/20",
+      "3/10"
+    ],
+    "symmetry": true,
+    "subadditivity": true,
+    "bound": true,
+    "star_slack_by_a": {
+      "0": "1/2",
+      "1": "1/10",
+      "2": "3/10",
+      "3": "1/10"
+    },
+    "LP_attainable": false,
+    "random_check_violations": 0
+  },
+  "C3_C4_exact": {
+    "C3_exact_envelope_of": "14 rational measures (denominator 10^9), coherent by construction",
+    "C3_max_distance_to_stored_values": 6.053577299680466e-10,
+    "C3_two_monotone_violations_exact": 6,
+    "C4_two_monotone_exact": true,
+    "C4_mobius_min_exact": -0.024434326483243344
+  }
+}
+V10 CHECKS PASSED

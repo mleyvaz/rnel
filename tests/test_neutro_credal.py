@@ -35,6 +35,7 @@ EX_LABELS = ["A", "B", "C"]
 
 
 # ----------------------------------------------------------------------------- Theorem 1: C1-C4, Table 2
+@pytest.mark.theorem("Counterexample C1", "Theorem 1(a)")
 def test_C1_sure_loss_with_degree_one_fifteenth():
     L = {A: (0.4 if len(A) == 1 else 0.3) for A in events(3)}
     C1 = np_from_lower(L, 3)
@@ -46,6 +47,7 @@ def test_C1_sure_loss_with_degree_one_fifteenth():
         nc.natural_extension(C1, [0, 1], outcomes=3)
 
 
+@pytest.mark.theorem("Counterexample C2", "Theorem 1(c)")
 def test_C2_incoherent_and_correction_reduces_I():
     L = {frozenset({0}): 0.5, frozenset({1}): 0.0, frozenset({2}): 0.0,
          frozenset({0, 1}): 0.2, frozenset({0, 2}): 0.5, frozenset({1, 2}): 0.0}
@@ -73,6 +75,7 @@ C4 = {"[0]": 0.13975133220199656, "[1]": 0.026200355140305494, "[2]": 0.17955975
 
 
 @pytest.mark.parametrize("L, n", [(C3, 4), (C4, 3)])
+@pytest.mark.theorem("Counterexamples C3, C4")
 def test_C3_C4_are_coherent_and_fixed_by_the_correction(L, n):
     NP = np_from_lower({key(k): v for k, v in L.items()}, n)
     assert nc.is_coherent(NP, outcomes=n)
@@ -81,6 +84,7 @@ def test_C3_C4_are_coherent_and_fixed_by_the_correction(L, n):
         assert np.allclose(corr[A], NP[A], atol=1e-8)
 
 
+@pytest.mark.theorem("Theorem 1(e)", "Table 2")
 def test_table2_classification_reproduced():
     """Table 2: n = 2 all coherent; n = 3: 1457 sure loss, 1505 ASL-incoherent, 38 coherent (same seed)."""
     rng = np.random.default_rng(20260929)
@@ -104,6 +108,7 @@ def test_table2_classification_reproduced():
     assert counts == {"sure_loss": 1457, "incoherent": 1505, "coherent": 38}
 
 
+@pytest.mark.theorem("Theorem 1(c)")
 def test_correction_never_adds_indeterminacy_random():
     """Theorem 1(c) on random normalised dual assignments that avoid sure loss."""
     rng = np.random.default_rng(3)
@@ -135,6 +140,7 @@ def random_singletons(rng, n):
     return np.c_[T, I, 1 - T - I]
 
 
+@pytest.mark.theorem("Theorem 2")
 def test_theorem2_closed_form_matches_lp_on_thousands_of_cases():
     rng = np.random.default_rng(7)
     stats = {"cases": 0, "coherent": 0, "asl": 0, "max_err": 0.0}
@@ -158,6 +164,7 @@ def test_theorem2_closed_form_matches_lp_on_thousands_of_cases():
     assert stats["coherent"] > 100 and stats["asl"] - stats["coherent"] > 100   # both regimes exercised
 
 
+@pytest.mark.theorem("Theorem 2")
 def test_theorem2_reading_of_the_coherence_condition():
     # I_1 = 0.5 exceeds the deficit 0.4: not coherent, and the correction shrinks it
     trip = [(0.3, 0.5, 0.2), (0.3, 0.2, 0.5)]
@@ -168,6 +175,7 @@ def test_theorem2_reading_of_the_coherence_condition():
     assert np.all(corr[:, 1] <= np.asarray(trip)[:, 1] + 1e-12)
 
 
+@pytest.mark.theorem("Corollary 2")
 def test_idm_triple_is_coherent_and_its_natural_extension_is_the_idm():
     rng = np.random.default_rng(11)
     for _ in range(300):
@@ -188,6 +196,7 @@ def test_idm_triple_is_coherent_and_its_natural_extension_is_the_idm():
 
 
 # ----------------------------------------------------------------------------- Theorem 3: sure loss
+@pytest.mark.theorem("Theorem 3")
 def test_sure_loss_degree_of_one_triple():
     rng = np.random.default_rng(5)
     for _ in range(1000):
@@ -206,6 +215,7 @@ def test_sure_loss_degree_of_one_triple():
 
 
 # ----------------------------------------------------------------------------- three classifiers, three classes
+@pytest.mark.theorem("Section 12.3 (decisions by sets)")
 def test_three_classifier_example():
     l, u = np.min(EX_MEMBERS, axis=0), np.max(EX_MEMBERS, axis=0)
     trip = np.c_[l, u - l, 1 - u]
@@ -219,6 +229,7 @@ def test_three_classifier_example():
         assert rule(members=EX_MEMBERS, labels=EX_LABELS) == ["A", "B"]
 
 
+@pytest.mark.theorem("Section 12.3 (decisions by sets)")
 def test_decision_rules_are_nested():
     rng = np.random.default_rng(9)
     for _ in range(200):
@@ -233,6 +244,7 @@ def test_decision_rules_are_nested():
 
 
 # ----------------------------------------------------------------------------- Theorems 8-9: glut frame
+@pytest.mark.theorem("Theorem 8")
 def test_minimal_glut_lifting_represents_the_whole_cube():
     rng = np.random.default_rng(8)
     pts = np.r_[rng.uniform(0, 1, (400, 3)), [[1, 0, 1], [1, 1, 1], [0, 0, 0], [0, 1, 0], [0.9, 0.2, 0.8]]]
@@ -248,6 +260,7 @@ def test_minimal_glut_lifting_represents_the_whole_cube():
             assert nc.sure_loss_degree(tuple(t)) > 0 and not g.is_empty()
 
 
+@pytest.mark.theorem("Theorem 8", "Proposition 16.3")
 def test_intermediate_frames_have_the_stated_regions():
     rng = np.random.default_rng(12)
     for t in rng.uniform(0, 1, (400, 3)):
@@ -256,6 +269,7 @@ def test_intermediate_frames_have_the_stated_regions():
         assert nc.to_glut_frame(t, "disjoint").represents() == (T + I + F <= 1)
 
 
+@pytest.mark.theorem("Theorem 9")
 def test_n_norms_are_natural_extensions_on_the_glut_frame():
     rng = np.random.default_rng(13)
     for _ in range(300):
@@ -274,6 +288,7 @@ def test_n_norms_are_natural_extensions_on_the_glut_frame():
 
 
 # ----------------------------------------------------------------------------- Theorem 5: SL retraction
+@pytest.mark.theorem("Theorem 5")
 def test_sl_retraction_and_paraconsistent_zone():
     rng = np.random.default_rng(14)
     W = 2.0
@@ -287,6 +302,7 @@ def test_sl_retraction_and_paraconsistent_zone():
 
 
 # ----------------------------------------------------------------------------- one-call diagnosis
+@pytest.mark.theorem("Listing C.12 (credal_diagnosis)")
 def test_credal_diagnosis_on_the_example():
     rep = nc.credal_diagnosis(EX_MEMBERS, labels=EX_LABELS, events={"A or C": ["A", "C"]})
     assert rep["status"] == "coherent" and rep["decision"] == ["A", "B"]

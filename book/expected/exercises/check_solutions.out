@@ -1,0 +1,487 @@
+OK   1.1    sum                    1.1
+OK   1.1    L                      0.6
+OK   1.1    U                      0.8
+OK   1.2    width                  0.3
+OK   1.2    unassigned             0.2
+OK   1.3    L(E_I) neutrosophic    0.2
+OK   1.3    L(E_I) intuitionistic  0.0
+OK   1.4    T+F                    1.20
+OK   1.4    delta                  0.10
+OK   1.4    glut                   0.20
+OK   1.5    lo                     0.286
+OK   1.5    hi                     0.786
+OK   1.5    IC                     0.214
+OK   1.5    IN                     0.143
+OK   1.5    IG                     0.143
+OK   1.6    mu+nu                  1.15
+OK   1.6    delta                  0.075
+OK   1.6    glut                   0.15
+OK   2.1    L                      0.333
+OK   2.1    U                      1
+OK   2.2    buy                    1.0
+OK   2.2    sell                   5.5
+OK   2.3    delta                  0.25
+OK   2.4    U2                     0.8
+OK   2.4    U12                    1
+OK   2.5    Bel                    0.3
+OK   2.5    Pl-Bel                 0.7
+OK   2.5    Bel(c)                 0
+OK   2.7    W                      0.1
+OK   2.7    Pi                     0.24
+OK   2.7    M                      0.3
+OK   2.7    Clayton                0.2927
+OK   2.7    survival               0.2960
+OK   2.8    alg T                  0.28
+OK   2.8    alg I                  0.37
+OK   2.8    alg F                  0.44
+OK   2.8    minmax T               0.4
+OK   2.8    frechet T              0.1
+OK   2.9    conj                   0.476
+OK   2.9    disj                   0.824
+OK   2.9    sum                    1.3
+OK   2.9    half                   0.65
+OK   2.10   Pl(a)                  0.9
+OK   2.10   Bel(ab)                0.6
+OK   2.10   Pl(c)                  0.4
+OK   2.10   IDM1 lo                0.500
+OK   2.10   IDM1 hi                0.667
+OK   2.10   IDM12 lo               0.75
+OK   2.10   IDM12 hi               0.917
+OK   2.11   conj                   0.315
+OK   2.11   disj                   0.585
+OK   2.11   Pi T                   0.315
+OK   2.11   Pi I                   0.300
+OK   2.11   Pi F                   0.525
+OK   2.11   M T                    0.375
+OK   2.11   M I                    0.300
+OK   2.11   M F                    0.450
+OK   2.13   U                      0.9
+OK   2.13   sum                    0.9
+OK   2.14   b                      0.667
+OK   2.14   d                      0.167
+OK   2.14   u                      0.167
+OK   2.14   proj                   0.75
+OK   2.15   ET                     0.7
+OK   2.15   EF                     0.6
+OK   2.15   sum                    1.3
+OK   2.16   ind lo                 0.30
+OK   2.16   ind hi                 0.56
+OK   2.16   fre lo                 0.1
+OK   2.16   fre hi                 0.7
+OK   2.16   com lo                 0.5
+OK   3.1    delta                  0
+OK   3.1    E01                    0.5
+OK   3.1    E2                     0.2
+OK   3.1    I01 before             0.5
+OK   3.1    I01 after              0.3
+OK   3.3    T a                    0.2
+OK   3.3    I a                    0.7
+OK   3.3    T ab                   0.5
+OK   3.3    I ab                   0.5
+OK   3.4    delta                  0.067
+OK   3.4    deficit                −0.2
+OK   3.5    I                      0.2
+OK   3.6    delta                  0
+OK   3.6    E01                    0.7
+OK   3.6    E2                     0.1
+OK   3.6    I before               0.3
+OK   3.6    I after                0.2
+OK   3.6    U2                     0.3
+OK   3.7    share coherent n3      1.3
+OK   3.8    Delta                  0.4
+OK   3.8    lo12                   0.7
+OK   3.8    hi12                   0.9
+OK   3.8    I12                    0.2
+OK   3.9    Delta                  0.2
+OK   3.9    u1new                  0.7
+OK   3.9    Delta c                0.4
+OK   3.9    sumI c                 0.3
+OK   3.9    sum upper              0.9
+OK   3.11   Delta                  0.091
+OK   3.11   lo                     0.773
+OK   3.11   hi                     0.864
+OK   3.12   upper empty            0.286
+OK   3.12   lower 3                0.714
+OK   3.12   I                      0.286
+OK   3.13   Delta                  0.2
+OK   3.13   T1                     0.6
+OK   4.1    delta a                0.1
+OK   4.1    delta d                0
+OK   4.2    delta overset          0.25
+OK   4.2    upper underset         0.7
+OK   4.3    bet hi                 0.6
+OK   4.3    sym lo                 0.3
+OK   4.3    sym hi                 0.5
+OK   4.3    sym lo                 0.3
+OK   4.3    sym hi                 0.5
+OK   4.3    sym (0,1,1) lo         −0.5
+OK   4.3    sym (0,0,0)            0.5
+OK   4.4    sym lo                 0.4
+OK   4.4    sym hi                 0.5
+OK   4.4    bet hi                 0.7
+OK   4.5    delta                  0.05
+OK   4.7    delta                  0.2
+OK   4.7    half                   0.2
+OK   4.7    over                   0.1
+OK   5.1    proj                   0.5
+OK   5.1    U                      0.8
+OK   5.1    T b                    0.6
+OK   5.2    Ts                     0.75
+OK   5.2    Fs                     0.6
+OK   5.2    sum                    1.35
+OK   5.2    lo                     0.545
+OK   5.2    hi                     0.727
+OK   5.2    delta                  0.175
+OK   5.3    b                      0.318
+OK   5.3    b+u                    0.795
+OK   5.4    proj                   0.35
+OK   5.4    U                      0.7
+OK   5.5    Ts                     0.333
+OK   5.5    rho T                  0.25
+OK   5.5    rho I                  0.5
+OK   5.5    chart hi               0.75
+OK   5.5    bet hi                 0.667
+OK   6.1    glut                   0.4
+OK   6.1    T+I                    1.1
+OK   6.1    sum                    1.7
+OK   6.2    ind T                  0.42
+OK   6.2    ind I                  0.44
+OK   6.2    ind F                  0.70
+OK   6.2    na T                   0.3
+OK   6.2    na I                   0.3
+OK   6.2    na F                   0.5
+OK   6.2    com T                  0.6
+OK   6.3    Ialg                   0.58
+OK   6.3    credal width           0.44
+OK   6.3    sigma                  0.14
+OK   6.3    minmax width           0.4
+OK   6.5    sum                    0.9
+OK   6.6    ind T                  0.72
+OK   6.6    ind I                  0.58
+OK   6.6    ind F                  0.80
+OK   6.6    na T                   0.7
+OK   6.6    na I                   0.4
+OK   6.6    na F                   0.6
+OK   6.6    com T                  0.8
+OK   7.1    seg lo                 35
+OK   7.1    seg hi                 61
+OK   7.1    core lo                34
+OK   7.1    core hi                62
+OK   7.2    dem lo                 0.2
+OK   7.2    dem hi                 0.5
+OK   7.2    gb hi                  1
+OK   7.3    I x1                   0.091
+OK   7.3    L1 x1                  0.409
+OK   7.3    U2 x1                  0.455
+OK   7.3    I x2                   0.048
+OK   7.3    L1 x2                  0.429
+OK   7.3    U2 x2                  0.429
+OK   7.3    I x3                   0.032
+OK   7.3    L1 x3                  0.435
+OK   7.3    U2 x3                  0.419
+OK   7.4    K                      0.96
+OK   7.4    PCR5 A                 0.448
+OK   7.4    PCR5 C                 0.104
+OK   7.4    DSm Bel C              0.36
+OK   7.4    delta                  0.4
+OK   7.5    Manski lo              0.5
+OK   7.5    Manski hi              0.7
+OK   7.5    IDM lo                 0.490
+OK   7.5    IDM hi                 0.706
+OK   7.6    K                      0.56
+OK   7.6    Dem A                  0.2727
+OK   7.6    PCR5 A                 0.3524
+OK   7.6    PCR5 B                 0.6476
+OK   7.6    delta                  0.2
+OK   8.1    Ia                     0.7
+OK   8.1    Ib                     0.8
+OK   8.1    Ic                     0.5
+OK   8.2    wab                    0.25
+OK   8.2    wac                    0.15
+OK   8.2    wbc                    0.05
+OK   8.2    t max                  0.2
+OK   8.4    lhs                    0.6
+OK   8.4    rhs                    0.8
+OK   8.4    slack                  −0.2
+OK   8.5    S14                    0.25
+OK   8.5    S34                    0.75
+OK   8.5    S12                    0.25
+OK   8.5    sigma                  −0.25
+OK   8.7    Ia                     0.8
+OK   8.7    Ic                     0.5
+OK   9.1    score W                0.4000
+OK   9.1    score Pi               0.5000
+OK   9.1    score M                0.6667
+OK   9.1    sigma Pi               0.10
+OK   9.2    clayton                1.333
+OK   9.2    gumbel                 1.667
+OK   9.2    frank                  4.161
+OK   9.3    C02                    0.142857
+OK   9.3    C08                    0.685994
+OK   9.3    sigma                  −0.056863
+OK   9.3    G07                    0.603859
+OK   9.3    G03                    0.182196
+OK   9.3    sigmaG                 −0.021663
+OK   9.4    tau23                  0.115
+OK   9.4    tau13                  0.705
+OK   9.4    tau24                  0.242
+OK   9.4    tau12                  0.356
+OK   9.5    sigma                  0.11
+OK   9.5    width                  0.33
+OK   9.5    Ialg                   0.44
+OK   9.6    W T                    0.35
+OK   9.6    W I                    0.30
+OK   9.6    W F                    0.35
+OK   9.6    M T                    0.45
+OK   9.6    M I                    0.25
+OK   9.6    M F                    0.30
+OK   9.6    sW                     0.5667
+OK   9.6    sM                     0.6333
+OK   9.7    clayton                0.667
+OK   9.7    gumbel                 1.333
+OK   9.7    frank                  2.372
+OK   10.1   T ind                  0.396
+OK   10.1   F ind                  0.45
+OK   10.1   T com                  0.46
+OK   10.1   F com                  0.41
+OK   10.1   T na                   0.3
+OK   10.1   F na                   0.41
+OK   10.1   spread                 0.16
+OK   10.1   mean F                 0.35
+OK   10.2   left                   0.435
+OK   10.2   right                  0.288
+OK   10.2   defect                 0.147
+OK   10.2   on                     0.667
+OK   10.2   off                    0.167
+OK   10.3   lo                     0.577
+OK   10.3   hi                     0.808
+OK   10.3   drop lo                0.714
+OK   10.3   drop hi                0.762
+OK   10.4   gap                    −0.0049
+OK   10.5   truth ind              0.15
+OK   10.5   truth na               0
+OK   10.5   fals ind               0.65
+OK   10.5   fals na                0.5
+OK   10.5   plith                  0.4
+OK   10.6   ind                    0.512
+OK   10.6   com                    0.55
+OK   10.6   mean                   0.5
+OK   10.7   atoms min              10
+OK   10.7   atoms product          64
+OK   10.7   atoms hybrid           7
+OK   10.8   Tind 0                 0.48
+OK   10.8   Tcom 0                 0.60
+OK   10.8   Tna 0                  0.40
+OK   10.8   Tind 0.25              0.59
+OK   10.8   Tcom 0.25              0.65
+OK   10.8   Tna 0.25               0.55
+OK   10.8   Tind 0.5               0.70
+OK   10.8   Tcom 0.5               0.70
+OK   10.8   Tna 0.5                0.70
+OK   10.8   F ind 0.25             0.2475
+OK   10.8   F half                 0.175
+OK   10.9   East lo                0.526
+OK   10.9   East hi                0.737
+OK   10.9   East drop lo           0.656
+OK   10.9   East drop hi           0.672
+OK   10.9   West lo                0.612
+OK   10.9   West hi                0.660
+OK   10.9   West drop lo           0.634
+OK   10.9   West drop hi           0.648
+OK   10.9   Manski lo              0.533
+OK   10.9   Manski hi              0.733
+OK   10.10  delta                  0.1
+OK   10.10  glut                   0.2
+OK   10.10  eq T                   0.583
+OK   10.10  eq I                   0.183
+OK   10.10  eq F                   0.350
+OK   10.10  eq hi                  0.65
+OK   10.10  eq width               0.067
+OK   10.10  w T                    0.575
+OK   10.10  w I                    0.208
+OK   10.10  w F                    0.275
+OK   10.10  w hi                   0.725
+OK   10.11  ind lo                 0.144
+OK   10.11  ind hi                 0.302
+OK   10.11  sub lo                 0.30
+OK   10.11  sub hi                 0.42
+OK   10.11  com lo                 0.5
+OK   10.11  com hi                 0.6
+OK   10.11  na hi                  0.6
+OK   10.11  mean I                 0.125
+OK   10.12  o1 fre lo              0.15
+OK   10.12  o1 ind                 0.368
+OK   10.12  o1 mean                0.7875
+OK   10.12  o2 fre lo              0.00
+OK   10.12  o2 ind                 0.316
+OK   10.12  o2 mean                0.7500
+OK   10.12  o3 fre lo              0.40
+OK   10.12  o3 ind                 0.500
+OK   10.12  o3 mean                0.8500
+OK   11.2   L eps                  0.2
+OK   11.2   Lpm eps                0.1
+OK   11.3   S                      2.5
+OK   11.3   T                      1.2
+OK   11.3   I                      0.8
+OK   11.3   F                      −1.0
+OK   11.3   sure loss              0.2
+OK   11.4   nu                     0.3
+OK   11.4   max                    1.3
+OK   11.4   tv                     1.6
+OK   11.5   delta                  0.2
+OK   11.6   S                      4
+OK   11.6   T                      1.25
+OK   11.6   I                      0.5
+OK   11.6   F                      −0.75
+OK   11.6   sure loss              0.25
+OK   11.7   nu                     0.34
+OK   11.7   tv                     1.68
+OK   11.8   alg                    0.04
+OK   11.8   ne                     −0.24
+OK   12.1   Kb                     6
+OK   12.1   c                      0.545
+OK   12.3   V                      4
+OK   12.5   R                      8
+OK   12.5   S                      6
+OK   12.5   Kw                     3
+OK   12.5   Kb                     3
+OK   12.5   c                      0.375
+OK   12.6   state bytes            240
+OK   12.6   credal bytes           40000
+OK   12.6   ratio                  166.7
+OK   12.7   hull                   0.415
+OK   12.7   flip                   0.585
+OK   13.1   L                      0.357
+OK   13.1   U                      0.786
+OK   13.1   IC                     0.071
+OK   13.1   IU                     0.143
+OK   13.1   IN                     0.071
+OK   13.1   IG                     0.143
+OK   13.1   gap                    0.429
+OK   13.2   lo                     0.571
+OK   13.2   hi                     1.429
+OK   13.2   sum                    1.000
+OK   13.3   total                  1.071
+OK   13.3   lo                     0.429
+OK   13.3   hi                     0.786
+OK   13.3   notx lo                0.286
+OK   13.4   total                  0.929
+OK   13.4   lo                     0.357
+OK   13.4   hi                     0.714
+OK   13.5   lo                     0.250
+OK   13.5   hi                     0.750
+OK   13.5   A                      0.250
+OK   13.5   B                      0.125
+OK   13.5   G                      0.125
+OK   13.5   C                      0.250
+OK   13.5   U                      0.125
+OK   13.6   S                      23
+OK   13.6   lo                     0.174
+OK   13.6   hi                     0.652
+OK   13.6   IA                     0.261
+OK   13.6   IU                     0.087
+OK   13.6   IC                     0.043
+OK   13.7   typed 0                0.0647
+OK   13.7   learned 0              0.0424
+OK   13.7   reg typed              0.0223
+OK   13.7   reg learned            0.0198
+OK   13.7   reg fixed min          0.0779
+OK   13.8   lo                     0.000
+OK   13.8   hi                     0.826
+OK   13.8   IU                     0.435
+OK   13.8   n_t                    0
+OK   13.8   n_f                    4
+OK   13.8   n_v                    10
+OK   14.1   ind lo                 0.1344
+OK   14.1   ind hi                 0.27
+OK   14.1   sub lo                 0.24
+OK   14.1   sub hi                 0.3
+OK   14.1   com lo                 0.4
+OK   14.1   na hi                  0.5
+OK   14.1   na sum                 2.5
+OK   14.2   sum l                  2.3
+OK   14.3   T                      0.2
+OK   14.3   I                      0.5
+OK   14.3   F                      0.3
+OK   14.3   L                      0.2
+OK   14.3   U                      0.7
+OK   14.4   T0                     0.500
+OK   14.4   F0                     0.333
+OK   14.4   T1                     0.250
+OK   14.4   F1                     0.583
+OK   14.4   T2                     0.083
+OK   14.4   F2                     0.750
+OK   14.4   I                      0.167
+OK   14.4   U1                     0.667
+OK   14.4   U2                     0.417
+OK   14.4   U3                     0.250
+OK   14.4   ne T                   0.750
+OK   14.4   ne I                   0.167
+OK   14.4   ne F                   0.083
+OK   14.4   ne U                   0.917
+OK   14.4   2T0                    0.545
+OK   14.4   2F0                    0.364
+OK   14.4   2T1                    0.273
+OK   14.4   2F1                    0.636
+OK   14.4   2T2                    0.091
+OK   14.4   2F2                    0.818
+OK   14.4   2I                     0.091
+OK   14.5   R                      9
+OK   14.5   S                      8
+OK   14.5   Kw                     5
+OK   14.5   Kb                     3
+OK   14.5   C*                     0.316
+OK   14.6   delta                  0.15
+OK   14.6   glut                   0.3
+OK   14.6   ep (0,1,1)             0.4
+OK   14.6   ep (1,1,1)             0.6
+OK   15.1   u(not p)               0.6
+OK   15.1   u sum                  1.2
+OK   15.2   sum                    1.2
+OK   15.3   Ip                     0
+OK   15.3   Ipor                   0.5
+OK   15.3   Ipand                  0.5
+OK   15.5   I111                   1
+OK   15.7   T(p)                   1
+OK   15.7   T(p and not p)         2
+OK   15.8   delta                  0.5
+OK   15.8   glut                   1
+OK   15.9   U                      0.75
+OK   15.9   I                      0.35
+OK   15.10  I18                    0.1
+OK   15.10  I36                    0.0526
+OK   15.11  lo                     0.286
+OK   15.11  hi                     0.786
+OK   15.11  sum                    1.000
+OK   15.11  ia lo                  0.500
+OK   15.11  ia hi                  1.500
+OK   15.11  glut                   1.214
+OK   15.12  c1 lo                  0.455
+OK   15.12  c1 hi                  0.636
+OK   15.12  c2 hi                  0.545
+OK   15.12  c1 lo x3               0.517
+OK   15.12  c2 hi x3               0.483
+OK   15.12  I                      0.182
+OK   15.12  I x3                   0.069
+OK   16.1   delta                  0.1
+OK   16.1   r                      4.667
+OK   16.1   q                      2
+OK   16.1   lo                     0.538
+OK   16.1   hi                     0.769
+OK   16.1   glut                   0.2
+OK   16.3   sigma                  0.14
+OK   16.5   T                      0.5
+OK   16.5   I                      0.35
+OK   16.5   F                      0.2
+OK   16.6   left                   0.2491
+OK   16.6   right                  0.1531
+OK   16.6   defect                 0.096
+OK   16.6   formula                0.096
+OK   book   Clayton(2) at (0.6, 0.7) = 0.5117 (F.6) (script 0.5117, book 0.5117)
+OK   book   C1 delta = 1/15 (Appendix B) (script 0.0666666666666667, book 0.06666666666666667)
+OK   book   running example: added triple (0.6,0.1,0.3) incurs sure loss 0.05 (script 0.04999999999999993, book 0.05)
+OK   book   Prop 8.3.3 sigma = -1/4 (script -0.25, book -0.25)
+OK   book   A2 bracket (0.5667, 0.6333) (script 0.5666666666666665, book 0.5666666666666665)
+OK   book   case 2026 lower 0.174 (Section 12.7.7) (script 0.174, book 0.174)
+
+exercises with numerical answers: 117; numerical values: 479; book cross-checks: 6; failures: 0

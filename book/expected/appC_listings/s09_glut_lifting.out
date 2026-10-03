@@ -1,0 +1,11 @@
+(0.0, 0.0, 0.0)   two-atom sure loss = 0.00 | lifting: represents = True, envelope = (0.0, 0.0, 0.0), least glut mass = 0.00
+(0.0, 1.0, 0.0)   two-atom sure loss = 0.00 | lifting: represents = True, envelope = (0.0, 1.0, 0.0), least glut mass = 0.00
+(1.0, 0.0, 1.0)   two-atom sure loss = 0.50 | lifting: represents = True, envelope = (1.0, 0.0, 1.0), least glut mass = 1.00
+(0.8, 0.3, 0.7)   two-atom sure loss = 0.25 | lifting: represents = True, envelope = (0.8, 0.3, 0.7), least glut mass = 0.50
+(0.7, 0.1, 0.6)   two-atom sure loss = 0.15 | lifting: represents = True, envelope = (0.7, 0.1, 0.6), least glut mass = 0.30
+atoms: ('tf_glut_i_gap', 'glut', 'tf_gap', 'all')
+patterns (E_T, E_I, E_F): [[0, 1, 1], [1, 0, 1], [1, 1, 0], [1, 1, 1]]
+extreme points (rows attain T, I, F): [[0.2, 0.0, 0.0, 0.8], [0.0, 0.7, 0.0, 0.3], [0.0, 0.0, 0.3, 0.7]]
+(0.5, 0.3, 0.2)  belnap: True   disjoint: True
+(0.6, 0.3, 0.6)  belnap: True   disjoint: False
+(0.6, 0.5, 0.6)  belnap: False  disjoint: False

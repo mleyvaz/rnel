@@ -1,0 +1,6 @@
+R, S, K_w, K_b = 11.0 10.0 4.0 6.0
+C* = 0.5217 | reversed order: 0.5217
+[0.0, 1.0]: credal gap = 6.0000, (u - l) K_b = 6.0000
+[0.2, 0.7]: credal gap = 3.0000, (u - l) K_b = 3.0000
+RNEL tuple: {'T': 0.423, 'C': 0.115, 'U': 0.0, 'N': 0.0, 'G': 0.077, 'F': 0.385}
+action: ('G', 'retrieve more evidence or abstain')

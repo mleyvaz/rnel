@@ -1,0 +1,23 @@
+row_id,paper,year,source_group,design,analysis,assoc_support,causal_support,type,type_S1,identification_design
+P01,Bauer2013,2013,ECOLOGICAL,ecological,ecological correlation,weak,none,A,A,False
+P02a,Liew2016,2016,DNBC,cohort,adjusted Cox,moderate,weak,t,v,False
+P02b,Liew2016,2016,DNBC,cohort,adjusted Cox,none,none,v,v,False
+P02c,Liew2016,2016,DNBC,cohort,duration,moderate,weak,t,v,False
+P03,AvellaGarcia2016,2016,INMA,cohort,adjusted regression,weak,none,A,A,False
+P04,Ji2020,2020,BOSTON_BBC,cohort (biomarker),adjusted logistic,moderate,weak,t,v,False
+P05,Alemany2021,2021,ALSPAC+DNBC+GASPII+GENR+INMA+RHEA,multi-cohort meta-analysis,adjusted incl. indications; random effects,moderate,weak,t,v,False
+P06a,Ahlqvist2024,2024,SE_NATIONAL,register cohort,population model,weak,none,A,A,False
+P06b,Ahlqvist2024,2024,SE_NATIONAL,sibling comparison,sibling control,none,opposes,f,f,True
+P06c,Ahlqvist2024,2024,SE_NATIONAL,sibling comparison,sibling dose-response,none,opposes (dose),f,f,True
+P07a,Okubo2026,2026,JP_CLAIMS (name NV),claims cohort,1:1 PS matched,weak,none,A,A,False
+P07b,Okubo2026,2026,JP_CLAIMS (name NV),sibling + NC exposures,sibling & negative control,none,opposes (weak),f,v,True
+P08a,Lee2026,2026,TW_NHIRD,register cohort,full cohort adjusted,moderate,none,A,A,False
+P08b,Lee2026,2026,TW_NHIRD,sibling comparison,sibling matched,none,opposes (weak),f,v,True
+P08c,Lee2026,2026,TW_NHIRD,sibling bidirectional,direction-specific sibling,-,-,c,c,True
+P09a,Luo2026,2026,HK_CDARS,"EHR cohort, triangulation",sibling matched,none,opposes,f,f,True
+P09b,Luo2026,2026,HK_CDARS,negative-control exposure,NC exposure,(confounding signal),opposes,f,f,True
+P10a,Gram2026,2026,DK_NATIONAL,"register cohort, triangulation",exposed vs unexposed,weak,none,A,A,False
+P10b,Gram2026,2026,DK_NATIONAL,active comparator,indication-type comparator,none,opposes (weak),f,v,True
+P10c,Gram2026,2026,DK_NATIONAL,paternal negative control,NC exposure,(confounding signal),opposes (weak),f,v,True
+P11,Prahm2026,2026,DK_NATIONAL,register cohort (research letter),NV,NV,NV,excluded,excluded,False
+P12,Leppert2019,2019,ALSPAC,genetic association (PRS -> exposure),PRS -> APAP,-,weakens ADHD path; uninformative for ASD,v,v,False

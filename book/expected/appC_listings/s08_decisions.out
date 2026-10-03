@@ -1,0 +1,5 @@
+[9, 7, 2] triples [[0.45, 0.1, 0.45], [0.35, 0.1, 0.55], [0.1, 0.1, 0.8]] -> interval dominance: ['1', '2']
+[18, 14, 4] triples [[0.474, 0.053, 0.474], [0.368, 0.053, 0.579], [0.105, 0.053, 0.842]] -> interval dominance: ['1']
+interval dominance: ['A', 'B', 'C', 'D']
+maximality:         ['A', 'B', 'C']
+E-admissibility:    ['A', 'B']

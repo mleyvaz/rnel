@@ -1,0 +1,14 @@
+Step 2a: Theorem 3 on each course (sure loss iff T + F > 1, degree (T + F - 1)^+ / 2)
+  DE (0.5, 0.1, 0.2): T + F = 0.7  degree = 0.000  coherent = True
+  SA (0.6, 0.2, 0.4): T + F = 1.0  degree = 0.000  coherent = True
+  FM (0.8, 0.0, 0.1): T + F = 0.9  degree = 0.000  coherent = True
+  SM (0.4, 0.3, 0.5): T + F = 0.9  degree = 0.000  coherent = True
+
+Step 2b: the four course triples as one assessment on the 16-atom frame
+  avoids sure loss: True  coherent: True
+  natural extension to 'graduates' (T, I, F) = (0.0, 0.5, 0.5)
+
+Step 2c: the adviser adds a direct triple for 'graduates'
+  graduates (0.6, 0.1, 0.3): degree of sure loss = 0.050  avoids = False  coherent = False
+  graduates (0.0, 0.6, 0.4): degree of sure loss = 0.000  avoids = True  coherent = False  -> natural extension (0.0, 0.5, 0.5)
+  graduates (0.0, 0.5, 0.5): degree of sure loss = 0.000  avoids = True  coherent = True

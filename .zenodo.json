@@ -1,8 +1,8 @@
 {
   "upload_type": "software",
   "title": "rnel: Refined Neutrosophic Evidential Logic",
-  "version": "0.2.0",
-  "description": "<p>A Python library for evidential reasoning that keeps contradiction, ignorance and retracted evidence apart. It implements Refined Neutrosophic Evidential Logic (RNEL) evidence tuples, Subjective Logic opinions and operators, priority-product and base-rate-calibrated operators, ranking cascades, decision policies, zero-shot RNEL from text via NLI, neural evidential heads (PyTorch) and an experimental signed-evidence ledger. The core uses only the Python standard library. Academic, experimental software; the API may change.</p>",
+  "version": "0.3.0",
+  "description": "<p>A toolkit for neutrosophic evidence. RNEL 0.3.0 consolidates evidence tuples, Subjective Logic, credal and conflict diagnostics, refined neutrosophic statistics, DSmT, plithogenic and copula operators, score functions, learning utilities, and the reproducibility runner for the book Neutrosophic Evidence. Academic, experimental software; the API may change.</p>",
   "creators": [
     {
       "name": "Leyva-Vázquez, Maikel Yelandi",

@@ -1,0 +1,5 @@
+F2 OK
+ n=3 cases=1500 subadd_viol=0 non_cut=0 submodular=1500
+ n=4 cases=1500 subadd_viol=0 non_cut=1193 submodular=324
+ n=5 cases=600 subadd_viol=0 non_cut=580 submodular=20
+ n=3 triangle == cut: True
