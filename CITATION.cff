@@ -4,7 +4,11 @@ title: "rnel: Refined Neutrosophic Evidential Logic"
 abstract: "A toolkit for neutrosophic evidence: evidence tuples, Subjective Logic, credal and conflict diagnostics, refined neutrosophic statistics, DSmT, plithogenic and copula operators, learning utilities, and reproducible book computations."
 version: 0.3.0
 date-released: 2026-10-05
-doi: 10.5281/zenodo.23040628
+doi: 10.5281/zenodo.23178344
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23040627
+    description: "All versions of rnel (concept DOI)."
 url: "https://mleyvaz.github.io/rnel/"
 repository-code: "https://github.com/mleyvaz/rnel"
 license: MIT

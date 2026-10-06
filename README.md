@@ -3,7 +3,7 @@
 ### A toolkit for neutrosophic evidence
 
 [![Documentation](https://img.shields.io/badge/docs-mleyvaz.github.io%2Frnel-blue)](https://mleyvaz.github.io/rnel/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23040628.svg)](https://doi.org/10.5281/zenodo.23040628)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23178344.svg)](https://doi.org/10.5281/zenodo.23178344)
 
 Documentation: https://mleyvaz.github.io/rnel/
 
@@ -124,8 +124,9 @@ and a glut lifting* (manuscript, 2026); the tests check the closed forms of Theo
 - the neural head and the per-source network.
 
 Version 0.3.0 consolidates the credal, conflict, refined-statistics, multi-view learning, DSmT, copula,
-plithogenic and score modules used by *Neutrosophic Evidence*. Version 0.2.0 remains archived at
-https://doi.org/10.5281/zenodo.23040628; Maikel will create the 0.3.0 Zenodo version manually.
+plithogenic and score modules used by *Neutrosophic Evidence*, and adds `rnel.existential`. It is archived at
+https://doi.org/10.5281/zenodo.23178344 (version 0.2.0: https://doi.org/10.5281/zenodo.23040628; all versions:
+https://doi.org/10.5281/zenodo.23040627).
 
 ## Evidence on real data
 The preregistered evaluation of the neural head on AVeriTeC, CLIMATE-FEVER and ChaosNLI is at
