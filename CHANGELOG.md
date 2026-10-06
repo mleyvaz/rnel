@@ -1,15 +1,26 @@
 # Changelog
 
-## 0.3.0 — 2026-10-03 (local release candidate; not published)
+## 0.3.0 — 2026-10-05
 - Consolidates the modules used by *Neutrosophic Evidence*: credal and neutrosophic-credal tools,
   order-free conflict diagnostics, refined neutrosophic statistics, RNEL-MVC and active learning,
   DSmT, copula N-norms, plithogenic operators, and base-rate score functions.
 - Adds the explicit affine bridge `I = (1 + eps) / 2`, theorem-labelled tests, and a reproducibility
   runner (`python -m rnel.book regenerate --check`) using only repository-relative paths.
-- Adds Python 3.10–3.13 test CI and packaging checks. Publication, tag creation, PyPI upload, and the
-  new Zenodo version remain manual owner actions.
+- Adds Python 3.10–3.13 test CI and packaging checks. The PyPI upload remains a manual owner action.
+- **New (experimental): `rnel.existential`.** Existential (noisy-OR) triple of a claim from per-source stance
+  probabilities (support, refute, insufficient): T = 1 - prod(1 - s_k), F = 1 - prod(1 - r_k), I = prod(n_k),
+  computed in log space. The glut g = T + I + F - 1 of these product expressions equals Dempster's conflict K of the
+  conjunctive combination of m_k({s}) = s_k, m_k({r}) = r_k, m_k(Theta) = n_k (`dempster_conflict` computes K directly);
+  with one stance per source and independent sources it is also P(some support and some refutation).
+  `belnap_masses` maps (T, I, F) to (t, f, b, n) and raises (or warns with `strict=False`) outside the faithful
+  region. Calibration tools without scikit-learn: PAVA `isotonic_fit`/`isotonic_predict`, inductive Venn-Abers
+  (`venn_abers`, cached per insertion rank), Mondrian isotonic calibration by stratum (`mondrian_calibrate`, with
+  base-rate and global fallbacks) and a split-conformal glut p-value (`glut_test`).
+- Tests: `tests/test_existential.py` (g = K to 1e-12; Monte Carlo frequency of support-and-refute; single source
+  has no glut; Belnap masses non-negative and summing to 1; Venn-Abers equal to brute-force refits; conformal
+  false-alarm rate <= alpha + 3 SE; Mondrian calibration lowers per-stratum ECE with dependent sources).
 
-## Unreleased (branch feat/dsmt, local only)
+### In 0.3.0: `rnel.dsmt` (developed on branch feat/dsmt)
 - **New experimental module `rnel.dsmt`: Dezert-Smarandache theory on small frames** (standard library only).
   Frames under the free DSm model (hyper-power set, Venn-region codification), Shafer's model and hybrid models
   (`Frame(atoms, model, empty=[...])`, string syntax `"A|B"`, `"A&B"`); rules `conjunctive` (= classic DSm rule on
@@ -24,7 +35,7 @@
   Dezert-Smarandache 2008, Dezert-Dezert-Smarandache 2021, Zadeh's example; properties; optional cross-check with
   evidencelib). Example: `examples/dsmt_demo.py`.
 
-## Unreleased (branch feat/neutro-credal-tools, local only)
+### In 0.3.0: `rnel.neutro_credal` (developed on branch feat/neutro-credal-tools)
 - **New experimental module `rnel.neutro_credal`: credal tools for neutrosophic triples** (needs numpy + scipy, extra
   `rnel[credal]`). Under the betting reading T <= P(A) <= 1 - F the triple inherits Walley's checks and tools:
   `avoids_sure_loss`, `sure_loss_degree` (closed form (T + F - 1)/2, Theorem 3), `is_coherent`/`classify` (LP, and the
@@ -36,7 +47,7 @@
   credal checks, natural extension and decision with the RNEL state (a, b, u, c) and C* from evidence per source.
 - Tests: `tests/test_neutro_credal.py`; example: `examples/neutro_credal_demo.py`.
 
-## Unreleased (branch feat/credal, local only)
+### In 0.3.0: `rnel.credal` (developed on branch feat/credal)
 - **New experimental module `rnel.credal`** (needs numpy + scikit-learn, extra `rnel[credal]`).
   `CredalEnsemble` wraps a scikit-learn ensemble (RandomForest, 100 trees, `min_samples_leaf=5` by default) and
   returns per-class lower/upper probabilities over the members (`envelope`: hull, alpha-trimmed as in Nguyen,
@@ -48,7 +59,7 @@
   reject).
 - Tests: `tests/test_credal.py`.
 
-## Unreleased (branch exp/conflict-first-principles, local only)
+### In 0.3.0: `rnel.conflict` (developed on branch exp/conflict-first-principles)
 - **New experimental module `rnel.conflict`: between-source conflict from first principles.** `k_between`
   (K_b = min(M+, M-), the unique measure satisfying ally consolidation, unanimity null and opposed-pair
   additivity), `k_within`, `credal_gap`, multinomial `sup_gap`, the additive state `ConflictState` (R, S, K_w)

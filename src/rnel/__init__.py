@@ -20,6 +20,8 @@ Optional (numpy + scikit-learn):
 Optional (numpy + scipy):
   rnel.neutro_credal (experimental) Walley's tools on neutrosophic triples: sure loss, coherence, natural
                  extension, IDM, decisions by sets, glut lifting, and a one-call credal + RNEL diagnosis
+Experimental (numpy):
+  rnel.existential  existential (noisy-OR) triple, glut = Dempster conflict, Venn-Abers and conformal tools
 Optional (PyTorch):
   rnel.nn         typed evidential head and per-source evidential network
 """

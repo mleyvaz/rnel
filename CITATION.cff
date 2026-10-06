@@ -3,7 +3,7 @@ message: "If you use rnel, please cite this software and the paper that defines 
 title: "rnel: Refined Neutrosophic Evidential Logic"
 abstract: "A toolkit for neutrosophic evidence: evidence tuples, Subjective Logic, credal and conflict diagnostics, refined neutrosophic statistics, DSmT, plithogenic and copula operators, learning utilities, and reproducible book computations."
 version: 0.3.0
-date-released: 2026-10-03
+date-released: 2026-10-05
 doi: 10.5281/zenodo.23040628
 url: "https://mleyvaz.github.io/rnel/"
 repository-code: "https://github.com/mleyvaz/rnel"
