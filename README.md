@@ -24,9 +24,13 @@ With only T and F it reduces exactly to Subjective Logic (Jøsang) and to eviden
 
 ## Install
 ```bash
-pip install git+https://github.com/mleyvaz/rnel             # core, no dependencies
-pip install "rnel[nn] @ git+https://github.com/mleyvaz/rnel"  # with PyTorch models
+pip install rnel                                    # core, no dependencies
+pip install "rnel[credal]"                          # with numpy, scikit-learn and scipy
+pip install "rnel[nn]"                              # with PyTorch models
+pip install git+https://github.com/mleyvaz/rnel     # development version
 ```
+
+The core has no dependencies. The modules `credal`, `neutro_credal`, `existential`, `mvc`, `active` and `cluster` use numpy, scipy or scikit-learn (install `rnel[credal]`), and `rnel.nn` uses PyTorch (install `rnel[nn]`).
 
 ## Quick start
 ```python
